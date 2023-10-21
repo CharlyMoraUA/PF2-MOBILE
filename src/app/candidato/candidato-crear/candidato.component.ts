@@ -5,6 +5,7 @@ import { CandidatoCrearService } from '../candidatoCrear.service';
 import { Candidato } from '../representaciones/candidato';
 import { Router } from '@angular/router';
 import {FormControl} from '@angular/forms';
+import {Country} from '@angular-material-extensions/select-country';
 
 @Component({
   selector: 'app-candidato',
@@ -18,7 +19,7 @@ export class CandidatoComponent implements OnInit {
   idiomas = new FormControl('');
   idiomasList: string[] = ['Español', 'Inglés', 'Francés', 'Alemán', 'Italiano', 'Portugués', 'Ruso'];
   candidatos: Array<Candidato> = [];
-
+  country: Country
 
   constructor(
     private formBuilder: FormBuilder,
@@ -50,6 +51,8 @@ export class CandidatoComponent implements OnInit {
   
 
   crearCandidato(candidato: Candidato){
+    console.log("El pais es" +  this.country.name);
+    candidato.pais = this.country.name
     this.candidatoService.crearCandidato(candidato).subscribe(candidato=>{
       console.info("Candidato creado correctamente: ", candidato)
       this.toastr.success("Confirmación", "Candidato creado")
@@ -59,6 +62,10 @@ export class CandidatoComponent implements OnInit {
 
   backToLanding(){
     this._router.navigate(["landing"])
+  }
+
+  onCountrySelected(country: Country) {
+    this.country = country
   }
 
 }

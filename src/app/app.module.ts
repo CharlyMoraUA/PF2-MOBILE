@@ -15,6 +15,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CandidatoComponent } from 'app/candidato/candidato-crear/candidato.component';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     MatTooltipModule,
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
-    })
+    }),
+    MatSelectCountryModule.forRoot('de'),
   ],
   declarations: [
     AppComponent,
