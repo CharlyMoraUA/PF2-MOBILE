@@ -1,3 +1,7 @@
+const baseUrl = '/';
+const urlBaseAutenticacion = '/';
 export const environment = {
-  production: true
+  production: true,
+  baseUrl,
+  urlBaseAutenticacion
 };

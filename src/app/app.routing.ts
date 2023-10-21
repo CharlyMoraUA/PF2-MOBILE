@@ -2,15 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
-
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { CandidatoComponent } from './candidato/candidato-crear/candidato.component';
 
 const routes: Routes =[
   {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
-  }, {
+  },
+  { 
+    path: 'candidato',        
+    component: CandidatoComponent },
+  {
     path: '',
     component: AdminLayoutComponent,
     children: [{
