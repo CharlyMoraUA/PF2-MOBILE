@@ -47,7 +47,8 @@ export class LoginCandidatoComponent implements OnInit {
         error => {
           console.log(error);
           this.error = true
-          this.toastr.error("Error", "Authentication failed")
+          this.toastr.error("Error", "Authentication failed: "+error.error.mensaje,{
+            positionClass: 'toast-center-center'} )
         })
   }
 

@@ -1,3 +1,20 @@
-body{
-  background-color: white !important;
+.row{
+  height:100px;
+}
+
+.col-6{
+  margin-top: 10%;
+}
+
+.login_button{
+  width: 100%;
+  font-size: 0.75em;
+  font-weight: bold;
+  position: relative !important;
+  margin-top: 80% !important;
+}
+
+.main-content-mobile{
+  background-color: white;
+  min-height: 100vh !important;
 }
