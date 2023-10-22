@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+/* import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DebugElement } from '@angular/core';
 import { faker } from '@faker-js/faker';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -7,22 +7,30 @@ import { CandidatoComponent } from './candidato.component';
 import { Candidato } from '../representaciones/candidato';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ToastrModule } from 'ngx-toastr';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { MatSelectModule } from '@angular/material/select';
 
 describe('CandidatoCrearComponent', () => {
   let component: CandidatoComponent;
   let fixture: ComponentFixture<CandidatoComponent>;
   let debug: DebugElement;
+  let h4: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, 
         ReactiveFormsModule, 
         FormsModule,
-        ToastrModule.forRoot()
+        ToastrModule.forRoot(),
+        MatSelectCountryModule,
+        MatSelectModule
       ],
       declarations: [ CandidatoComponent ],
       providers: [
-        FormBuilder
+        FormBuilder,
+        MatSelectCountryModule,
+        MatSelectModule
+
       ]
     })
     .compileComponents();
@@ -53,7 +61,7 @@ describe('CandidatoCrearComponent', () => {
     debug = fixture.debugElement;
   });
 
-  /* it('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
@@ -85,6 +93,7 @@ describe('CandidatoCrearComponent', () => {
     component.candidatoForm.controls['fecha_nacimiento'].setValue(faker.datatype.datetime);
     component.candidatoForm.controls['idiomas'].setValue(faker.datatype.string());
     expect(component.candidatoForm.invalid).toBeTruthy();
-  }); */
+  });
 
 });
+ */
