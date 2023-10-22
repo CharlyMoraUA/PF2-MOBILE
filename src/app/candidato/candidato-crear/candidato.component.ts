@@ -61,7 +61,7 @@ export class CandidatoComponent implements OnInit {
   }
 
   backToLanding(){
-    this._router.navigate(["landing"])
+    this._router.navigate(["login-candidato"])
   }
 
   onCountrySelected(country: Country) {

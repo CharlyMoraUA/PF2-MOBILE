@@ -53,7 +53,7 @@ export class LoginCandidatoComponent implements OnInit {
   }
 
   irCrearCuentaCandidato(){
-    this._router.navigate(["landing"])
+    this._router.navigate(["candidato"])
   }
 
 }
