@@ -16,6 +16,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { CandidatoComponent } from 'app/candidato/candidato-crear/candidato.component';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
+import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
@@ -38,10 +40,12 @@ import { MatSelectCountryModule } from "@angular-material-extensions/select-coun
       positionClass :'toast-bottom-right'
     }),
     MatSelectCountryModule.forRoot('es'),
+    MatIconModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
+    LoginCandidatoComponent,
     CandidatoComponent
   ],
   providers:[ToastrService],
