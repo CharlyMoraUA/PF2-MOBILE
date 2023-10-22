@@ -9,7 +9,7 @@ import { LoginCandidatoComponent } from './landing/login-candidato/login-candida
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'landing',
+    redirectTo: 'login-candidato',
     pathMatch: 'full',
   },
   { 
