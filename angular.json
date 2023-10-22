@@ -7,6 +7,15 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -23,7 +32,9 @@
             "styles": [
               "node_modules/perfect-scrollbar/css/perfect-scrollbar.css",
               "src/assets/scss/material-dashboard.scss",
-              "src/assets/css/demo.css"
+              "src/assets/css/demo.css",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",
@@ -79,6 +90,11 @@
                 "fonts": true
               },
               "outputHashing": "all"
+            },
+            "es": {
+              "localize": ["es"],
+              "outputPath": "dist/material-dashboard-angular-es/",
+              "i18nMissingTranslation": "error"
             }
           }
         },
@@ -93,6 +109,9 @@
             },
             "development": {
               "browserTarget": "material-dashboard-angular:build:development"
+            },
+            "es": {
+              "browserTarget": "material-dashboard-angular:build:es"
             }
           },
           "defaultConfiguration": "development"

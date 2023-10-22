@@ -1,0 +1,48 @@
+<div class="main-content main-content-mobile">
+  <div class="container-fluid">
+    <div class="col-12">
+      <div class="card">
+          <div class="card-header card-header-danger text-center" >
+              <h4 class="card-title">ABC JOBS</h4>
+              <p class="card-category" i18n="Candidate Login Title@@CandidateLoginTitle">Candidate LogIn</p>
+          </div>
+      </div>
+      <div>
+        <form
+        [formGroup]="loginCandidatoForm"
+        (ngSubmit)="!loginCandidatoForm.invalid && loginCandidato(usuario.value, clave.value)"
+        >
+          <div>
+              <div class="col-12" style="margin-top: 15%">
+                  <mat-form-field class="example-full-width">
+                    <input #usuario novalidate matInput placeholder="User" formControlName="usuario" required i18n-placeholder="User input placeholder@@UserInputLabel">                        
+                  </mat-form-field>
+              </div>
+              <div class="col-12" style="margin-top: 15%">
+                  <mat-form-field class="example-full-width">
+                    <input #clave novalidate matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="clave" required i18n-placeholder="Password input placeholder@@PasswordInputLabel">
+                    <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  </mat-form-field>
+                  
+              </div>
+              <div class="col-12 text-center" style="margin-top: 20%">
+                  <a i18n="Password forgotten label@@passwordForgottenLabel">I forgot my password</a>
+              </div>
+              <div class="row absolute bottom-0">
+                <div class="col-6">
+                  <button mat-raised-button class="btn btn-danger login_button" (click)="irCrearCuentaCandidato()" i18n="Create account button label@@CreateAccountButton">Create account</button>
+                </div>
+                <div class="col-6">
+                    <button 
+                    mat-raised-button class="btn btn-danger login_button" 
+                    type="submit" 
+                    [disabled]="!loginCandidatoForm.valid" i18n="LogIn button label@@LogInButton">LogIn</button>
+                </div>
+              </div>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+    </div>
+  </div>
+  </div>
+</div>
