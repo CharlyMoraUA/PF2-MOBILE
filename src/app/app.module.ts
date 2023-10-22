@@ -13,8 +13,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
+import { CandidatoComponent } from 'app/candidato/candidato-crear/candidato.component';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
+import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
@@ -26,6 +28,7 @@ import { MatIconModule } from '@angular/material/icon';
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     MatButtonModule,
     MatRippleModule,
@@ -36,15 +39,16 @@ import { MatIconModule } from '@angular/material/icon';
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
     }),
+    MatSelectCountryModule.forRoot('es'),
     MatIconModule
   ],
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    LoginCandidatoComponent, 
-
+    LoginCandidatoComponent,
+    CandidatoComponent
   ],
-  providers: [ToastrService],
+  providers:[ToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
