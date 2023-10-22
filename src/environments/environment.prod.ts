@@ -1,3 +1,5 @@
+const urlBaseAutenticacion = '/';
 export const environment = {
-  production: true
+  production: true,
+  urlBaseAutenticacion
 };
