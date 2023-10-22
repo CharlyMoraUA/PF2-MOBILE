@@ -32,7 +32,7 @@ import {HttpClientModule} from '@angular/common/http';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
-    MatSelectCountryModule.forRoot('de'),
+    MatSelectCountryModule.forRoot('es'),
     HttpClientModule
   ],
   declarations: [

@@ -37,7 +37,7 @@ import { MatSelectCountryModule } from "@angular-material-extensions/select-coun
     ToastrModule.forRoot({
       positionClass :'toast-bottom-right'
     }),
-    MatSelectCountryModule.forRoot('de'),
+    MatSelectCountryModule.forRoot('es'),
   ],
   declarations: [
     AppComponent,
