@@ -1,5 +1,5 @@
-const baseUrl = 'https://micro-candidatos-kdbo2knypq-uc.a.run.app/';
-const urlBaseAutenticacion = 'https://micro-autenticacion-kdbo2knypq-uc.a.run.app';
+const baseUrl = '/';
+const urlBaseAutenticacion = '/';
 export const environment = {
   production: true,
   baseUrl,
