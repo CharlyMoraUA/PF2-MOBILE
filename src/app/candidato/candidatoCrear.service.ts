@@ -11,6 +11,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class CandidatoCrearService {
 
   private apiUrl = environment.baseUrl + 'candidato/';
+  //private apiUrl = "http://192.168.0.4:8080/" + 'candidato/';
 
 constructor(private http: HttpClient) { }
 
@@ -25,6 +26,10 @@ httpOptions = {
 crearCandidato(candidato: Candidato): Observable<Candidato> {
   candidato.idiomas = candidato.idiomas.toString()
   return this.http.post<Candidato>(this.apiUrl+"create", candidato);
+}
+
+obtenerHistorialEntrevista(id_candidato): Observable<any> {
+  return this.http.get<any>(this.apiUrl+"historialEntrevistas?id_candidato="+id_candidato);
 }
 
 }
