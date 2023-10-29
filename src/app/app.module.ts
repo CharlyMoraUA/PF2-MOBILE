@@ -18,6 +18,8 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { MatSelectCountryModule } from "@angular-material-extensions/select-country";
 import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
 import { MatIconModule } from '@angular/material/icon';
+import { LoginEmpresaComponent } from './landing/login-empresa/login-empresa.component';
+import { HistorialEntrevistasComponent } from './candidato/gestion/historial-entrevistas/historial-entrevistas.component';
 
 @NgModule({
   imports: [
@@ -46,7 +48,9 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     AdminLayoutComponent,
     LoginCandidatoComponent,
-    CandidatoComponent
+    CandidatoComponent,
+    LoginEmpresaComponent,
+    HistorialEntrevistasComponent
   ],
   providers:[ToastrService],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { CandidatoComponent } from './candidato/candidato-crear/candidato.component';
 import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
+import { LoginEmpresaComponent } from './landing/login-empresa/login-empresa.component';
 
 const routes: Routes =[
   {
@@ -26,6 +27,10 @@ const routes: Routes =[
   { 
     path: 'login-candidato',  
     component: LoginCandidatoComponent
+  },
+  { 
+    path: 'login-empresa',  
+    component: LoginEmpresaComponent
   },
 ];
 
