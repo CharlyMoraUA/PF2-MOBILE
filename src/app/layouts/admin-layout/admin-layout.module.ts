@@ -18,7 +18,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MatIconModule } from '@angular/material/icon';
+import { CandidatoInfoTecnicaComponent } from 'app/candidato/candidato-infoTecnica/candidatoInfoTecnica/candidatoInfoTecnica.component';
+import { CandidatoCrearService } from 'app/candidato/candidatoCrear.service';
+import { CandidatoInfoService } from 'app/candidato/candidatoInfo.service';
+import { MatDialogModule } from '@angular/material/dialog';
+
+// Factory function required during AOT compilation
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   imports: [
@@ -33,7 +45,16 @@ import {HttpClientModule} from '@angular/common/http';
     MatSelectModule,
     MatTooltipModule,
     MatSelectCountryModule.forRoot('es'),
-    HttpClientModule
+    HttpClientModule,
+    MatIconModule,
+    MatDialogModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   declarations: [
     DashboardComponent,
@@ -43,7 +64,12 @@ import {HttpClientModule} from '@angular/common/http';
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
-    UpgradeComponent
+    UpgradeComponent,
+    CandidatoInfoTecnicaComponent 
+  ],
+  providers:[
+    CandidatoCrearService,
+    CandidatoInfoService
   ]
 })
 

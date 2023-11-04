@@ -1,0 +1,85 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger text-center">
+                    <h4 class="card-title" i18n="Technical information title@@TechnicalInformationTitle">{{'TECHNICAL_INFO.Title' | translate}}</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <h5>Información técnica</h5>
+                      </div>
+                      <div class="col-3">
+                          <mat-icon (click)="openDialog()">add</mat-icon>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <caption>Información técnica del candidato</caption>
+                        <tbody>
+                          <tr>
+                            <th class="mat-h2 text-left">{{'TECHNICAL_INFO.Technology' | translate}}</th>
+                          </tr>
+                          <tr *ngFor="let info of lista">
+                            <div *ngIf="info.tipo == 'Tecnologia'">
+                              <td style="width:25%" class="text-left col-10">
+                                {{info["valor"]}}
+                              </td>
+                              <td class="col-1"><mat-icon>edit</mat-icon></td>
+                              <td class="col-1"><mat-icon>delete</mat-icon></td>
+                            </div>
+                          </tr>
+                          <tr>
+                            <th class="mat-h2 text-left">{{'TECHNICAL_INFO.Language' | translate}}</th>
+                          </tr>
+                          <tr *ngFor="let info of lista">
+                            <div *ngIf="info.tipo == 'Lenguaje'">
+                              <td  style="width:25%" class="text-left col-10">
+                                {{info["valor"]}}
+                              </td>
+                              <td class="col-1"><mat-icon>edit</mat-icon></td>
+                              <td class="col-1"><mat-icon iconPositionEnd>delete</mat-icon></td>
+                            </div>
+                          </tr>
+                          <tr>
+                            <th class="mat-h2 text-left">{{'TECHNICAL_INFO.Rol' | translate}}</th>
+                          </tr>
+                          <tr *ngFor="let info of lista">
+                            <div *ngIf="info.tipo == 'Rol'">
+                              <td  style="width:25%" class="text-left col-10">
+                                {{info["valor"]}}
+                              </td>
+                              <td class="col-1"><mat-icon>edit</mat-icon></td>
+                              <td class="col-1"><mat-icon iconPositionEnd>delete</mat-icon></td>
+                            </div>
+                          </tr>
+                      </tbody>
+                      </table>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                        <div class="row">
+                          <div class="col-md-12">
+                            <button mat-raised-button class="btn btn-danger btn-block" (click)="backToInfo()" i18n="Back button@@BackButton">{{'TECHNICAL_INFO.BackButton' | translate}}</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon>
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
+  </div>
+</div>

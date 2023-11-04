@@ -1,7 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
@@ -20,6 +20,13 @@ import { LoginCandidatoComponent } from './landing/login-candidato/login-candida
 import { MatIconModule } from '@angular/material/icon';
 import { LoginEmpresaComponent } from './landing/login-empresa/login-empresa.component';
 import { HistorialEntrevistasComponent } from './candidato/gestion/historial-entrevistas/historial-entrevistas.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// Factory function required during AOT compilation
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   imports: [
@@ -42,7 +49,14 @@ import { HistorialEntrevistasComponent } from './candidato/gestion/historial-ent
       positionClass :'toast-bottom-right'
     }),
     MatSelectCountryModule.forRoot('es'),
-    MatIconModule
+    MatIconModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   declarations: [
     AppComponent,

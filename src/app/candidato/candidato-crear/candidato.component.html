@@ -5,7 +5,7 @@
               <div class="card">
                   <div class="card-header card-header-danger text-center" >
                       <h4 class="card-title">ABC JOBS</h4>
-                      <p class="card-category">Creación de candidato</p>
+                      <p class="card-category">{{'CREATE_CANDIDATE.Title' | translate}}</p>
                   </div>
                   <div class="card-body">
                       <form
@@ -20,16 +20,16 @@
                           <div class="row">
                               <div class="col-6">
                                   <mat-form-field>
-                                    <select matNativeControl required formControlName="tipo_doc" novalidate placeholder="Tipo documento" ngDefaultControl>
-                                      <option value="Cedula">Cedula</option>
-                                      <option value="Cextranjeria">Cextranjeria</option>
-                                      <option value="Pasaporte">Pasaporte</option>
+                                    <select matNativeControl required formControlName="tipo_doc" novalidate placeholder="{{'CREATE_CANDIDATE.DocumentType' | translate}}" ngDefaultControl>
+                                      <option value="Cedula">>{{'CREATE_CANDIDATE.IdentificationCard' | translate}}</option>
+                                      <option value="Cextranjeria">{{'CREATE_CANDIDATE.ForeignerCardId' | translate}}</option>
+                                      <option value="Pasaporte">{{'CREATE_CANDIDATE.Passport' | translate}}</option>
                                     </select>
                                   </mat-form-field>
                               </div>
                               <div class="col-6">
                                   <mat-form-field class="example-full-width">
-                                    <input novalidate matInput placeholder="Número documento" formControlName="num_doc" ngDefaultControl>                        
+                                    <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.DocumentNumber' | translate}}" formControlName="num_doc" ngDefaultControl>                        
                                     <div class="alert alert-danger alert-dismissible fade show"
                                     *ngIf=" candidatoForm.get('num_doc')!.hasError('minlength') && candidatoForm.get('num_doc')!.touched">
                                     Ingrese al menos 5 caracteres
@@ -41,7 +41,7 @@
                           <div class="row">
                             <div class="col-12">
                               <mat-form-field class="example-full-width">
-                                <input novalidate matInput placeholder="Nombres y apellidos" type="text" formControlName="nombre" ngDefaultControl>
+                                <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.FullName' | translate}}" type="text" formControlName="nombre" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                 *ngIf=" candidatoForm.get('nombre')!.hasError('minlength') && candidatoForm.get('nombre')!.touched">
                                 Ingrese al menos 5 caracteres
@@ -52,7 +52,7 @@
                           <div class="row">
                             <div class="col-6">
                               <mat-form-field class="example-full-width">
-                                <input novalidate matInput placeholder="Usuario" type="text" formControlName="usuario" ngDefaultControl>
+                                <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.User' | translate}}" type="text" formControlName="usuario" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                   *ngIf=" candidatoForm.get('usuario')!.hasError('minlength') && candidatoForm.get('usuario')!.touched">
                                   Mínimo 5 caracteres
@@ -61,7 +61,7 @@
                             </div>
                             <div class="col-6">
                               <mat-form-field class="example-full-width">
-                                <input novalidate matInput placeholder="Contraseña" type="text" formControlName="clave" [type]="hide ? 'password' : 'text'" ngDefaultControl>
+                                <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.Password' | translate}}" type="text" formControlName="clave" [type]="hide ? 'password' : 'text'" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                   *ngIf=" candidatoForm.get('clave')!.hasError('minlength') && candidatoForm.get('clave')!.touched">
                                   Mínimo 5 caracteres
@@ -72,7 +72,7 @@
                           <div class="row">
                             <div class="col-6">
                               <mat-form-field class="example-full-width">
-                               <input novalidate matInput placeholder="Fecha nacimiento" type="text" formControlName="fecha_nacimiento" ngDefaultControl>
+                               <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.BirthDate' | translate}}" type="text" formControlName="fecha_nacimiento" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                   *ngIf=" candidatoForm.get('fecha_nacimiento')!.hasError('pattern') && candidatoForm.get('fecha_nacimiento')!.touched">
                                   Fecha en formato aaaa-mm-dd
@@ -81,7 +81,7 @@
                             </div>
                             <div class="col-6">
                               <mat-form-field class="example-full-width">
-                                <input novalidate matInput placeholder="Teléfono de contacto" type="text" formControlName="telefono" ngDefaultControl>
+                                <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.TelephoneNumber' | translate}}" type="text" formControlName="telefono" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                   *ngIf=" candidatoForm.get('telefono')!.hasError('minlength') && candidatoForm.get('telefono')!.touched">
                                   Telefono debe contener al menor 7 dígitos
@@ -96,7 +96,7 @@
                           <div class="row">
                             <div class="col-12">
                               <mat-form-field class="example-full-width">
-                                <input novalidate matInput placeholder="Correo electrónico" type="email" formControlName="email" ngDefaultControl>
+                                <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.Email' | translate}}" type="email" formControlName="email" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                   *ngIf=" candidatoForm.get('email')!.hasError('email') && candidatoForm.get('email')!.touched">
                                   Ingrese un formato de correo válido
@@ -107,7 +107,7 @@
                           <div class="row">
                             <div class="col-6">
                               <mat-form-field>
-                                <mat-select multiple [formControl]="idiomas" placeholder="Idiomas" ngDefaultControl formControlName="idiomas">
+                                <mat-select multiple [formControl]="idiomas" placeholder="{{'CREATE_CANDIDATE.Languages' | translate}}" ngDefaultControl formControlName="idiomas">
                                   <mat-select-trigger>
                                     {{idiomas.value?.[0] || ''}}
                                     <span *ngIf="(idiomas.value?.length || 0) > 1" class="example-additional-selection">
@@ -120,7 +120,7 @@
                             </div>
                             <div class="col-6">
                               <mat-form-field class="example-full-width">
-                                <input novalidate matInput placeholder="Aspiración salarial" type="text" formControlName="aspiracion_salarial" ngDefaultControl>
+                                <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.WageAspiration' | translate}}" type="text" formControlName="aspiracion_salarial" ngDefaultControl>
                                 <div class="alert alert-danger alert-dismissible fade show"
                                   *ngIf=" candidatoForm.get('aspiracion_salarial')!.hasError('minlength') && candidatoForm.get('aspiracion_salarial')!.touched">
                                   Valor debe tener al menos 5 dígitos
@@ -135,15 +135,15 @@
                           <div class="row">
                               <div class="col-6">
                                 <mat-select-country appearance="outline"
-                                  label="País de residencia"
+                                 label="{{'CREATE_CANDIDATE.Country' | translate}}"
                                   formControlName="pais"
-                                  placeHolder="Seleccione un país"
+                                  
                                   (onCountrySelected)="onCountrySelected($event)">
                                   </mat-select-country>
                               </div>
                               <div class="col-6">
                                 <mat-form-field class="example-full-width">
-                                  <input novalidate matInput placeholder="Ciudad de residencia" type="text" formControlName="ciudad" ngDefaultControl>
+                                  <input novalidate matInput placeholder="{{'CREATE_CANDIDATE.City' | translate}}" type="text" formControlName="ciudad" ngDefaultControl>
                                 </mat-form-field>
                               </div>
                           </div>
@@ -151,14 +151,14 @@
                             <div class="col-lg-6 col-md-10 ml-auto mr-auto">
                               <div class="row">
                                 <div class="col-6">
-                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="backToLanding()">Regresar</button>
+                                  <button mat-raised-button class="btn btn-danger btn-block" (click)="backToLanding()">{{'CREATE_CANDIDATE.BackButton' | translate}}</button>
                                 </div>
                                 <div class="col-6">
                                     <button 
                                     mat-raised-button class="btn btn-danger btn-block" 
                                     type="submit" 
                                     [disabled]="!candidatoForm.valid"
-                                    >Crear cuenta
+                                    >{{'CREATE_CANDIDATE.RegisterButton' | translate}}
                                   </button>
                                 </div>
                               </div>
@@ -170,5 +170,13 @@
               </div>
           </div>
       </div>
+  </div>
+</div>
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon> 
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
   </div>
 </div>

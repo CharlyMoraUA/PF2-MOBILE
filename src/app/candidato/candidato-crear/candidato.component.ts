@@ -6,6 +6,7 @@ import { Candidato } from '../representaciones/candidato';
 import { Router } from '@angular/router';
 import {FormControl} from '@angular/forms';
 import {Country} from '@angular-material-extensions/select-country';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-candidato',
@@ -25,8 +26,14 @@ export class CandidatoComponent implements OnInit {
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
     private candidatoService: CandidatoCrearService,
-    private _router: Router
-  ) { }
+    private _router: Router,
+    public translate: TranslateService
+  ) {
+    // Register translation languages
+    translate.addLangs(['en', 'es']);
+    // Set default language
+    translate.setDefaultLang('es');
+   }
 
   ngOnInit() {
     this.candidatoForm = this.formBuilder.group({
@@ -66,6 +73,11 @@ export class CandidatoComponent implements OnInit {
 
   onCountrySelected(country: Country) {
     this.country = country
+  }
+
+  //Switch language
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
   }
 
 }
