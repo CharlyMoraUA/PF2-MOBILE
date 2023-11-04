@@ -37,11 +37,11 @@ describe('CandidatoInfoTecnicaComponent', () => {
   });
 
   it('should create headers of table ', () => {
-    expect(debug.query(By.css('th')).attributes["class"]).toEqual("mat-h2");
+    expect(debug.query(By.css('th')).attributes["class"]).toEqual("mat-h2 text-left");
   });
 
-  it('should create button to add new technical info', () => {
-    expect(debug.query(By.css('button')).attributes["color"]).toEqual("success");
+  it('should create a table to show technical information', () => {
+    expect(debug.query(By.css('table')).attributes["class"]).toEqual("table");
   });
 
   it('should show the title', () => {

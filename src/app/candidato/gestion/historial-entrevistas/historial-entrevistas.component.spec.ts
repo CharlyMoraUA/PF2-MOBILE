@@ -6,7 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { By } from '@angular/platform-browser';
 
 
-fdescribe('HistorialEntrevistasComponent', () => {
+describe('HistorialEntrevistasComponent', () => {
   let component: HistorialEntrevistasComponent;
   let fixture: ComponentFixture<HistorialEntrevistasComponent>;
 
