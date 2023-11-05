@@ -13,36 +13,47 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class AgregarRolComponent implements OnInit {
   detallarRolForm!: FormGroup;
-  tecnicas:[] = []
-  blandas:[] = []
-  habilidadesGenerales:any = []
-  blandasToGo = []
-  tecnicasToGo = []
+  rol=0
   listaRoles: any=[];
 
   constructor(
     private formBuilder: FormBuilder,
-    private consultarEquipoService: ConsultarEquipoService,
-    private toastr: ToastrService,
+    public consultarEquipoService: ConsultarEquipoService,
+    public toastr: ToastrService,
     public dialogRef: MatDialogRef<AgregarRolComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {}
+    @Inject(MAT_DIALOG_DATA) public data: any
+  ) {
+    this.detallarRolForm = this.formBuilder.group({
+      rol: [0, [Validators.required]],
+    });
+    this.nombre = this.data.nombre;
+    this.id_selected_equipo = this.data.id_equipo;
+  }
+  
+
   nombre = this.data.nombre
   id_selected_equipo = this.data.id_equipo
 
   ngOnInit(): void {
     this.detallarRolForm = this.formBuilder.group({
-      rol : ["", [Validators.required]],
-    })
+      rol: [0, [Validators.required]],
+    });
     console.log(this.data)
     this.consultarEquipoService.obtenerRoles(this.id_selected_equipo).subscribe(resp=>{
+      if (resp.roles) {
       let tempRoles: any[] = resp.roles
       let rolesFiltered = tempRoles.filter(x=>x.is_included==false)
-      this.listaRoles=rolesFiltered
+      console.log(rolesFiltered)
+      this.listaRoles=rolesFiltered}
     })
 
   }
 
   agregarRol(rol: any){
+    if (!this.detallarRolForm) {
+      // Handle the case where form is not initialized
+      return;
+    }
     this.consultarEquipoService.asociarRol(rol.rol,this.id_selected_equipo).subscribe(res=>{
       console.log("res")
       console.log(res)
