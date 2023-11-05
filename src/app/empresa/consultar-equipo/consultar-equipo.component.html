@@ -1,0 +1,70 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger text-center">
+            <h4 class="card-title" i18n="Technical information title@@TechnicalInformationTitle">ABC JOBS</h4>
+          </div>
+          <div class="card-body">
+            <div *ngIf="verEquipos">
+              <table class="table tabla_historial_entrevista">
+                  <tbody>
+                    <tr>
+                      <th class="mat-h2 text-center">Equipos</th>
+                    </tr>
+                    <tr *ngFor="let equipo of listaEquipos">
+                      <div>
+                        <tr class="mat-h4">
+                            <td>{{equipo["nombre"]}}</td>
+                            <button mat-raised-button (click)="showEditarRoles(equipo['id'])">Ver equipo</button>
+                        </tr>
+                        <tr class="desc">
+                          <td class="col-12">{{equipo["miembros"]}} miembros</td>
+                        </tr>
+                        <tr class="desc">
+                          <td class="col-12">{{equipo["descripcion"]}}</td>
+                        </tr>
+                      </div>
+                      <hr>
+                    </tr>
+                  </tbody>
+              </table>
+              <div class="col-md-12">
+                <button mat-raised-button class="btn btn-danger btn-block" (click)="backToHome()">Regresar</button>
+              </div>
+            </div>
+            <div *ngIf="!verEquipos">
+              <h3 class="text-center">Roles</h3>
+              <table class="table tabla_historial_entrevista">
+                 
+                  <tbody>
+                      <tr *ngFor="let rol of listaRoles">
+                        <td style="width:20%">
+                            {{rol["nombre"]}}
+                        </td>
+                        <td style="width:20%">
+                          <button style="float: right;" class="btnRoles" mat-button>Agregar rol</button>
+                        </td>
+                        <td style="width:20%">
+                          <button class="btnRoles" mat-button (click)="openDialog(rol.id_rol)">Editar rol</button>
+                        </td>
+                        <hr>
+                      </tr>
+                  </tbody>
+              </table>
+              <div>
+                <button class="btnBack" mat-raised-button class="btn btn-danger btn-block" (click)="backToHome()">Regresar</button>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+

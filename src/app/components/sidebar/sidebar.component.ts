@@ -8,9 +8,10 @@ declare interface RouteInfo {
     class: string;
 }
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/info_tecnica', title: 'Información técnica',  icon:'unarchive', class: 'active-pro' },
-    { path: '/historial_entrevistas', title: 'Historial de Entrevistas',  icon:'unarchive', class: 'active-pro' },
+    { path: '/dashboard', title: 'Dashboard',  icon: '', class: '' },
+    { path: '/info_tecnica', title: 'Información técnica',  icon:'', class: '' },
+    { path: '/historial_entrevistas', title: 'Historial de Entrevistas',  icon:'', class: '' },
+    { path: '/equipos', title: 'Equipos',  icon: '', class: '' },
 ];
 
 @Component({
@@ -21,9 +22,12 @@ export const ROUTES: RouteInfo[] = [
 export class SidebarComponent implements OnInit {
   menuItems: any[];
 
+  ROUTES
+
   constructor() { }
 
   ngOnInit() {
+    this.ROUTES = getRoutes()
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
   isMobileMenu() {
@@ -33,3 +37,20 @@ export class SidebarComponent implements OnInit {
       return true;
   };
 }
+
+export function getRoutes() : RouteInfo[]{
+  let usertype = sessionStorage.getItem("usertype")
+  console.log('usertype is: ', usertype)
+  if(usertype == 'candidato'){
+    return [
+      { path: '/info_tecnica', title: 'Información técnica',  icon:'', class: '' },
+      { path: '/historial_entrevistas', title: 'Historial de Entrevistas',  icon:'', class: '' },
+    ];
+  }
+  else{
+    return [
+      { path: '/equipos', title: 'Equipos',  icon: '', class: '' },
+    ];
+  }
+}
+
