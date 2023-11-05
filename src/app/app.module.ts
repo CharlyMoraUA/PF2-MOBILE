@@ -22,6 +22,7 @@ import { LoginEmpresaComponent } from './landing/login-empresa/login-empresa.com
 import { HistorialEntrevistasComponent } from './candidato/gestion/historial-entrevistas/historial-entrevistas.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AgregarRolComponent } from './empresa/gestion-empresa/agregar-rol/agregar-rol.component';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -64,7 +65,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     LoginCandidatoComponent,
     CandidatoComponent,
     LoginEmpresaComponent,
-    HistorialEntrevistasComponent
+    HistorialEntrevistasComponent,
+    AgregarRolComponent
   ],
   providers:[ToastrService],
   bootstrap: [AppComponent]

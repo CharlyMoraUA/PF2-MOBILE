@@ -3,6 +3,7 @@ import { ConsultarEquipoService } from '../consultar-equipo.service';
 import { MatDialog } from '@angular/material/dialog';
 import { DetallarRolComponent } from '../gestion-empresa/detallar-rol/detallar-rol.component';
 import { Router } from '@angular/router';
+import { AgregarRolComponent } from '../gestion-empresa/agregar-rol/agregar-rol.component';
 
 @Component({
   selector: 'app-consultar-equipo',
@@ -44,6 +45,25 @@ export class ConsultarEquipoComponent implements OnInit {
     const dialogRef = this.dialog.open(DetallarRolComponent, {
       data: {
         id_rol: id_rol
+      },
+      height: '600px',
+      width: '400px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.consultarEquipoService.obtenerRoles(this.id_selected_equipo).subscribe(resp=>{
+        this.listaRoles = resp.roles
+        this.id_selected_equipo=0;
+      })
+    });
+
+    return true;
+  }
+  openDialogRol(id_equipo, nombreEquipo) {
+    const dialogRef = this.dialog.open(AgregarRolComponent, {
+      data: {
+        id_equipo: id_equipo,
+        nombre: nombreEquipo
       },
       height: '600px',
       width: '400px',

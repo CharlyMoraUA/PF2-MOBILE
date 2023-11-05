@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger text-center">
+                      <h4 class="card-title" i18n="Technical information title@@TechnicalInformationTitle">ABC JOBS</h4>
+                    </div>
+                    <div class="card-body">
+  
+                        <div class="mat-h2 text-center">
+                            <p>{{nombre}}</p>
+                        </div>
+
+                        <form
+                        [formGroup]="detallarRolForm"
+                        (ngSubmit)="!detallarRolForm.invalid && agregarRol(detallarRolForm.value)"
+                        >
+                            <div class="row">
+                                <p>Seleccione el rol que desea agregar al equipo</p>
+                            </div>
+
+                            <div class="row">
+                                <mat-form-field class="example-full-width text-center" style="width: 100%;">
+                                    <mat-label>Roles</mat-label>
+                                    <mat-select novalidate formControlName="rol" ngDefaultControl>
+                                        <mat-option novalidate *ngFor="let rol of listaRoles" style="text-align: center;" [value]="rol.id_rol">
+                                            {{rol.nombre}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+ 
+                            <div class="row">
+                              <div class="col-lg-4 col-md-10 ml-auto mr-auto">
+                                  <div class="row">
+                                      <div class="col-6" style="text-align:center;">
+                                          <button mat-raised-button class="btn btn-danger btn-block" (click)="closeModal()"
+                                          >Regresar</button>
+                                      </div>
+                                      <div class="col-6" style="text-align:center;">
+                                          <button mat-raised-button class="btn btn-danger btn-block" type="submit" 
+                                          [disabled]="!detallarRolForm.valid">Guardar</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
