@@ -20,14 +20,17 @@ export class LandingComponent implements OnInit {
     }
 
   ngOnInit() {
+    return true;
   }
 
   goToCandidate(){
     this._router.navigate(["login-candidato"])
+    return true;
   }
 
   goToCompany(){
     this._router.navigate(["login-empresa"])
+    return true;
   }
 
   //Switch language

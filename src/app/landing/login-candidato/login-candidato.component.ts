@@ -51,6 +51,8 @@ export class LoginCandidatoComponent implements OnInit {
           this.toastr.error("Error", "Authentication failed: "+error.error.mensaje,{
             positionClass: 'toast-center-center'} )
         })
+
+        return true;
   }
 
   irCrearCuentaCandidato(){

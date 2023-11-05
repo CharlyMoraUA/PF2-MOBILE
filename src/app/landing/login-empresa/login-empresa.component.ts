@@ -62,6 +62,7 @@ export class LoginEmpresaComponent implements OnInit {
             this.toastr.error("Error", "Authentication failed: "+error.error.mensaje,{
               positionClass: 'toast-center-center'} )
           })
+          return true;
     }
 
   //Switch language
