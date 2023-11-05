@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger text-center">
-                      <h4 class="card-title" i18n="Technical information title@@TechnicalInformationTitle">ABC JOBS</h4>
+                      <h4 class="card-title">ABC JOBS</h4>
                     </div>
                     <div class="card-body">
   
@@ -17,12 +17,12 @@
                         (ngSubmit)="!detallarRolForm.invalid && agregarRol(detallarRolForm.value)"
                         >
                             <div class="row">
-                                <p>Seleccione el rol que desea agregar al equipo</p>
+                                <p i18n="Select rol to add label@@selectRolToAddLabel">Select the rol to add to the team</p>
                             </div>
 
                             <div class="row">
                                 <mat-form-field class="example-full-width text-center" style="width: 100%;">
-                                    <mat-label>Roles</mat-label>
+                                    <mat-label >Roles</mat-label>
                                     <mat-select novalidate formControlName="rol" ngDefaultControl>
                                         <mat-option novalidate *ngFor="let rol of listaRoles" style="text-align: center;" [value]="rol.id_rol">
                                             {{rol.nombre}}
@@ -36,11 +36,11 @@
                                   <div class="row">
                                       <div class="col-6" style="text-align:center;">
                                           <button mat-raised-button class="btn btn-danger btn-block" (click)="closeModal()"
-                                          >Regresar</button>
+                                          i18n="return add rol@@returnAddRol">Return</button>
                                       </div>
                                       <div class="col-6" style="text-align:center;">
                                           <button mat-raised-button class="btn btn-danger btn-block" type="submit" 
-                                          [disabled]="!detallarRolForm.valid">Guardar</button>
+                                          [disabled]="!detallarRolForm.valid"  i18n="save add rol@@saveAddRol">Save</button>
                                       </div>
                                   </div>
                               </div>
