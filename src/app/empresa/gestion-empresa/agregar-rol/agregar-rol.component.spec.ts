@@ -5,6 +5,7 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { of } from 'rxjs';
 import { AgregarRolComponent } from './agregar-rol.component';
 import { ConsultarEquipoService } from 'app/empresa/consultar-equipo.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('AgregarRolComponent', () => {
   let component: AgregarRolComponent;
@@ -20,7 +21,7 @@ describe('AgregarRolComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [AgregarRolComponent],
-      imports: [FormsModule, ReactiveFormsModule, ToastrModule.forRoot()],
+      imports: [FormsModule, ReactiveFormsModule, ToastrModule.forRoot(),TranslateModule.forRoot(),],
       providers: [
         FormBuilder,
         { provide: MatDialogRef, useValue: mockDialogRef },

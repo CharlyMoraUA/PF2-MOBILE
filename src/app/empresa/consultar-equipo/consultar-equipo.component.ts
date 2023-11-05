@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DetallarRolComponent } from '../gestion-empresa/detallar-rol/detallar-rol.component';
 import { Router } from '@angular/router';
 import { AgregarRolComponent } from '../gestion-empresa/agregar-rol/agregar-rol.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-consultar-equipo',
@@ -16,8 +17,12 @@ export class ConsultarEquipoComponent implements OnInit {
   constructor(
     private consultarEquipoService: ConsultarEquipoService,
     public dialog: MatDialog,
-    private _router: Router,
-  ) { }
+    public _router: Router,
+    public translate: TranslateService,
+  ) {    // Register translation languages
+    translate.addLangs(['en', 'es']);
+    // Set default language
+    translate.setDefaultLang('es'); }
   listaEquipos:any;
   listaRoles:any;
   id_selected_equipo = 0;
@@ -86,5 +91,9 @@ export class ConsultarEquipoComponent implements OnInit {
   backToHome(){
     this._router.navigate(["dashboard"])
 
+  }
+
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
   }
 }

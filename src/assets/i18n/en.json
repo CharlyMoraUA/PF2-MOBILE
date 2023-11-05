@@ -119,5 +119,17 @@
         "dateScheduled":"Scheduled Date:",
         "dateTaken":"Taken Date:"
 
+    },
+    "AGREGAR_ROL":{
+        "select_rol":"Select the rol to add to the team",
+        "return":"Return",
+        "save":"Save"
+    },
+    "CONSULTAR_EQUIPOS":{
+        "title":"Teams",
+        "viewteam":"View team",
+        "add_rol":"Add rol",
+        "return":"Return",
+        "edit_rol":"Edit rol"
     }
 }

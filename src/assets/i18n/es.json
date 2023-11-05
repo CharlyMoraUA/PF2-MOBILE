@@ -119,5 +119,17 @@
         "dateScheduled":"Fecha Programada:",
         "dateTaken":"Fecha Realizacion:"
 
+    },
+    "AGREGAR_ROL":{
+        "select_rol":"Seleccionar el rol para agregar al equipo",
+        "return":"Regresar",
+        "save":"Guardar"
+    },
+    "CONSULTAR_EQUIPOS":{
+        "title":"Equipos",
+        "viewteam":"Ver equipo",
+        "add_rol":"Agregar rol",
+        "return":"Regresar",
+        "edit_rol":"Editar rol"
     }
 }

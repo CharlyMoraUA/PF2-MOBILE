@@ -2,9 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ConsultarEquipoService } from 'app/empresa/consultar-equipo.service';
-import { ConsultarFichasService } from 'app/empresa/consultar-fichas.service';
-import { RolInput } from 'app/empresa/representaciones/rol_input';
 import { ToastrService } from 'ngx-toastr';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-agregar-rol',
@@ -21,6 +20,7 @@ export class AgregarRolComponent implements OnInit {
     public consultarEquipoService: ConsultarEquipoService,
     public toastr: ToastrService,
     public dialogRef: MatDialogRef<AgregarRolComponent>,
+    public translate: TranslateService,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.detallarRolForm = this.formBuilder.group({
@@ -68,6 +68,10 @@ export class AgregarRolComponent implements OnInit {
   closeModal() {
     this.id_selected_equipo=0;
     this.dialogRef.close();
+  }
+
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
   }
 
 }
