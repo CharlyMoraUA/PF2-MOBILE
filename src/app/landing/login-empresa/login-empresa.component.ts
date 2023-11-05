@@ -43,8 +43,9 @@ export class LoginEmpresaComponent implements OnInit {
         sessionStorage.setItem('tipo_doc_representante', res.info_representante.tipo_doc);
         sessionStorage.setItem('usuario_representante', res.info_representante.usuario);
         sessionStorage.setItem('nombre_empresa', res.info_empresa.nombre);
+        sessionStorage.setItem('usertype', 'empresa');
 
-        this.toastr.info("Exito!", "Auitenticacion Exitosa")
+        this.toastr.info("Exito!", "Autenticacion Exitosa")
         this._router.navigate(["dashboard"])
         },
           error => {
