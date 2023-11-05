@@ -17,7 +17,7 @@
                         (ngSubmit)="!detallarRolForm.invalid && agregarRol(detallarRolForm.value)"
                         >
                             <div class="row">
-                                <p i18n="Select rol to add label@@selectRolToAddLabel">Select the rol to add to the team</p>
+                                <p>{{"AGREGAR_ROL.select_rol" | translate}}</p>
                             </div>
 
                             <div class="row">
@@ -36,11 +36,13 @@
                                   <div class="row">
                                       <div class="col-6" style="text-align:center;">
                                           <button mat-raised-button class="btn btn-danger btn-block" (click)="closeModal()"
-                                          i18n="return add rol@@returnAddRol">Return</button>
+                                          >
+                                          {{"AGREGAR_ROL.return" | translate}}
+                                        </button>
                                       </div>
                                       <div class="col-6" style="text-align:center;">
                                           <button mat-raised-button class="btn btn-danger btn-block" type="submit" 
-                                          [disabled]="!detallarRolForm.valid"  i18n="save add rol@@saveAddRol">Save</button>
+                                          [disabled]="!detallarRolForm.valid">{{"AGREGAR_ROL.save" | translate}}</button>
                                       </div>
                                   </div>
                               </div>
@@ -52,4 +54,11 @@
         </div>
     </div>
   </div>
-  
+  <div class="copyright pull-right" style="margin-right: 5%;">
+    <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+        <mat-icon>translate</mat-icon> 
+        <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" class="select-lang" id="sel-lang" #selLang (change)="translateLanguageTo(selLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+        </select>
+    </div>
+  </div>
