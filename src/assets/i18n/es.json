@@ -98,5 +98,26 @@
         "Technology": "Tecnologías",
         "Language": "Lenguajes de programación",
         "Rol": "Roles a desempeñar"
+    },
+    "LOGIN_COMPANY":{
+        "title":"Authenticacion de Empresa",
+        "inputUser":"Usuario",
+        "inputPassword":"Clave",
+        "forgot":"Olvide mi Contraseña",
+        "create":"Crear Cuenta",
+        "login":"Iniciar Sesion"
+    },
+    "LANDING":{
+        "title":"Menu Inicio",
+        "empresa":"Empresa",
+        "candidato":"Candidato"
+    },
+    "INTERVIEW_STORY":{
+        "title":"Historial de Entrevistas",
+        "scheduled":"Entrevistas Programadas",
+        "taken":"Entrevistas Tomadas",
+        "dateScheduled":"Fecha Programada:",
+        "dateTaken":"Fecha Realizacion:"
+
     }
 }
