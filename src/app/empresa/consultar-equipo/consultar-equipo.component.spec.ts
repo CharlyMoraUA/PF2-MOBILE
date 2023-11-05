@@ -6,6 +6,7 @@ import { DebugElement } from '@angular/core';
 import { ConsultarEquipoComponent } from './consultar-equipo.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { MatDialogModule } from '@angular/material/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 
 describe('ConsultarEquipoComponent', () => {
   let component: ConsultarEquipoComponent;
@@ -14,7 +15,7 @@ describe('ConsultarEquipoComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule,
-      MatDialogModule],
+      MatDialogModule,TranslateModule.forRoot()],
       declarations: [ ConsultarEquipoComponent ]
     })
     .compileComponents();

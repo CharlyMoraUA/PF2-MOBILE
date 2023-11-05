@@ -17,7 +17,7 @@ export class ConsultarEquipoComponent implements OnInit {
   constructor(
     private consultarEquipoService: ConsultarEquipoService,
     public dialog: MatDialog,
-    private _router: Router,
+    public _router: Router,
     public translate: TranslateService,
   ) {    // Register translation languages
     translate.addLangs(['en', 'es']);
