@@ -98,5 +98,26 @@
         "Technology": "Technology",
         "Language": "Language",
         "Rol": "Roles"
+    },
+    "LOGIN_COMPANY":{
+        "title":"Company Login",
+        "inputUser":"User",
+        "inputPassword":"Password",
+        "forgot":"I forgot my password",
+        "create":"Create Account",
+        "login":"Login"
+    },
+    "LANDING":{
+        "title":"Landing",
+        "empresa":"Company",
+        "candidato":"Candidate"
+    },
+    "INTERVIEW_STORY":{
+        "title":"Interview History",
+        "scheduled":"Scheduled Interviews",
+        "taken":"Taken Interviews",
+        "dateScheduled":"Scheduled Date:",
+        "dateTaken":"Taken Date:"
+
     }
 }

@@ -1,3 +1,32 @@
-<p>
-  landing works!
-</p>
+<div class="main-content main-content-mobile">
+  <div class="container-fluid">
+    <div class="col-12">
+      <div class="card">
+          <div class="card-header card-header-danger text-center" >
+              <h4 class="card-title">ABC JOBS</h4>
+              <p class="card-category" i18n="Candidate Login Title@@CandidateLoginTitle">{{'LANDING.title' | translate}}</p>
+          </div>
+      </div>
+      <div>              
+        <div class="row " style="text-align:center;">
+          <div style="width:50%; text-align:center;">
+            <button mat-raised-button class="btn btn-danger login_button" (click)="goToCompany()" i18n="Create account button label@@CreateAccountButton">{{'LANDING.empresa' | translate}}</button>
+          </div>
+          <div style="width:50%;  text-align:center;">
+            <button mat-raised-button class="btn btn-danger login_button" (click)="goToCandidate()" i18n="Create account button label@@CreateAccountButton">{{'LANDING.candidato' | translate}}</button>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon> 
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
+  </div>
+</div>

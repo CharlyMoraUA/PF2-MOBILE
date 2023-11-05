@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CandidatoCrearService } from 'app/candidato/candidatoCrear.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-historial-entrevistas',
@@ -9,7 +10,13 @@ import { CandidatoCrearService } from 'app/candidato/candidatoCrear.service';
 export class HistorialEntrevistasComponent implements OnInit {
 
 
-  constructor(private candidatoService: CandidatoCrearService,) { }
+  constructor(private candidatoService: CandidatoCrearService,
+    public translate: TranslateService) { 
+      // Register translation languages
+      translate.addLangs(['en', 'es']);
+      // Set default language
+      translate.setDefaultLang('es');
+    }
 
   listaPrueba:any ;
 
@@ -26,6 +33,11 @@ export class HistorialEntrevistasComponent implements OnInit {
       this.listaFinalizadas = this.listaPrueba.filter(element=> element.estado==="fin")
       this.listaProgramadas = this.listaPrueba.filter(element=> element.estado!=="fin")
     })
+  }
+
+  //Switch language
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
   }
 
 }

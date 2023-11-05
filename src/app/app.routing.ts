@@ -6,11 +6,12 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { CandidatoComponent } from './candidato/candidato-crear/candidato.component';
 import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
 import { LoginEmpresaComponent } from './landing/login-empresa/login-empresa.component';
+import { LandingComponent } from './landing/landing/landing.component';
 
 const routes: Routes =[
   {
     path: '',
-    redirectTo: 'login-candidato',
+    redirectTo: 'landing',
     pathMatch: 'full',
   },
   { 
@@ -31,6 +32,10 @@ const routes: Routes =[
   { 
     path: 'login-empresa',  
     component: LoginEmpresaComponent
+  },
+  { 
+    path: 'landing',  
+    component: LandingComponent
   },
 ];
 
