@@ -1,0 +1,64 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger text-center">
+                      <h4 class="card-title">ABC JOBS</h4>
+                    </div>
+                    <div class="card-body">
+  
+                        <div class="mat-h2 text-center">
+                            <p>{{nombre}}</p>
+                        </div>
+
+                        <form
+                        [formGroup]="detallarRolForm"
+                        (ngSubmit)="!detallarRolForm.invalid && agregarRol(detallarRolForm.value)"
+                        >
+                            <div class="row">
+                                <p>{{"AGREGAR_ROL.select_rol" | translate}}</p>
+                            </div>
+
+                            <div class="row">
+                                <mat-form-field class="example-full-width text-center" style="width: 100%;">
+                                    <mat-label >Roles</mat-label>
+                                    <mat-select novalidate formControlName="rol" ngDefaultControl>
+                                        <mat-option novalidate *ngFor="let rol of listaRoles" style="text-align: center;" [value]="rol.id_rol">
+                                            {{rol.nombre}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+ 
+                            <div class="row">
+                              <div class="col-lg-4 col-md-10 ml-auto mr-auto">
+                                  <div class="row">
+                                      <div class="col-6" style="text-align:center;">
+                                          <button mat-raised-button class="btn btn-danger btn-block" (click)="closeModal()"
+                                          >
+                                          {{"AGREGAR_ROL.return" | translate}}
+                                        </button>
+                                      </div>
+                                      <div class="col-6" style="text-align:center;">
+                                          <button mat-raised-button class="btn btn-danger btn-block" type="submit" 
+                                          [disabled]="!detallarRolForm.valid">{{"AGREGAR_ROL.save" | translate}}</button>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="copyright pull-right" style="margin-right: 5%;">
+    <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+        <mat-icon>translate</mat-icon> 
+        <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" class="select-lang" id="sel-lang" #selLang (change)="translateLanguageTo(selLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+        </select>
+    </div>
+  </div>

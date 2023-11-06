@@ -3,6 +3,18 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
+//const baseUrl = 'http://127.0.0.1:5000/';
+// const baseUrl = 'https://micro-candidatos-kdbo2knypq-uc.a.run.app/';
+// const urlBaseAutenticacion = 'https://micro-autenticacion-kdbo2knypq-uc.a.run.app';
+// const urlBaseEmpresa = 'https://micro-empresa-kdbo2knypq-uc.a.run.app';
+const baseUrl = 'https://micro-candidatos-kdbo2knypq-uc.a.run.app/'; //micro Candidate
+const urlBaseAutenticacion = 'https://micro-autenticacion-kdbo2knypq-uc.a.run.app/'; // micro auth
+const urlBaseEmpresa = 'https://micro-empresa-kdbo2knypq-uc.a.run.app/'; //micro Gestion empresa
+const urlBaseEquipos = 'https://micro-equipos-kdbo2knypq-uc.a.run.app/'; //micro Gestion equipos
 export const environment = {
-  production: false
+  production: false,
+  baseUrl,
+  urlBaseAutenticacion,
+  urlBaseEmpresa,
+  urlBaseEquipos
 };

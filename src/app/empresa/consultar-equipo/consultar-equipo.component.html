@@ -1,0 +1,77 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger text-center">
+            <h4 class="card-title" i18n="Technical information title@@TechnicalInformationTitle">ABC JOBS</h4>
+          </div>
+          <div class="card-body">
+            <div *ngIf="verEquipos">
+              <table class="table tabla_historial_entrevista">
+                <tbody>
+                  <tr>
+                    <th class="mat-h2 text-center"> {{"CONSULTAR_EQUIPOS.title" | translate}}</th>
+                  </tr>
+                  <tr *ngFor="let equipo of listaEquipos">
+                    <div>
+                  <tr class="mat-h4">
+                    <td>{{equipo["nombre"]}}</td>
+                    <button mat-raised-button (click)="showEditarRoles(equipo['id'])"> {{"CONSULTAR_EQUIPOS.viewteam" | translate}}</button>
+                    
+                    
+                  </tr>
+                  <tr class="desc">
+                    <td class="col-12">{{equipo["miembros"]}} miembros</td>
+                  </tr>
+                  <tr class="desc">
+                    <td class="col-12">{{equipo["descripcion"]}}</td>
+                    <button mat-raised-button (click)="openDialogRol(equipo['id'], equipo['nombre'])">{{"CONSULTAR_EQUIPOS.add_rol" | translate}}</button>
+                  </tr>
+            </div>
+            <hr>
+            </tr>
+            </tbody>
+            </table>
+            <div class="col-md-12">
+              <button mat-raised-button class="btn btn-danger btn-block" (click)="backToHome()">{{"CONSULTAR_EQUIPOS.return" | translate}}</button>
+            </div>
+          </div>
+          <div *ngIf="!verEquipos">
+            <h3 class="text-center">Roles</h3>
+            <table class="table tabla_historial_entrevista">
+
+              <tbody>
+                <tr *ngFor="let rol of listaRoles">
+                  <td style="width:20%">
+                    {{rol["nombre"]}}
+                  </td>
+                  <td style="width:20%">
+                    <button class="btnRoles" mat-button (click)="openDialog(rol.id_rol)">{{"CONSULTAR_EQUIPOS.edit_rol" | translate}}</button>
+                  </td>
+                  <hr>
+                </tr>
+              </tbody>
+            </table>
+            <div>
+              <button class="btnBack" mat-raised-button class="btn btn-danger btn-block"
+                (click)="backToHome()">{{"CONSULTAR_EQUIPOS.return" | translate}}</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon> 
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" class="select-lang" id="sel-lang" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
+  </div>
+</div>

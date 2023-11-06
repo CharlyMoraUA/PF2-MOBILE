@@ -8,6 +8,9 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import { HistorialEntrevistasComponent } from 'app/candidato/gestion/historial-entrevistas/historial-entrevistas.component';
+import { CandidatoInfoTecnicaComponent } from 'app/candidato/candidato-infoTecnica/candidatoInfoTecnica/candidatoInfoTecnica.component';
+import { ConsultarEquipoComponent } from 'app/empresa/consultar-equipo/consultar-equipo.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -60,4 +63,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'historial_entrevistas',        component: HistorialEntrevistasComponent },
+    { path: 'info_tecnica',   component: CandidatoInfoTecnicaComponent },
+    { path: 'equipos',        component: ConsultarEquipoComponent },
 ];
