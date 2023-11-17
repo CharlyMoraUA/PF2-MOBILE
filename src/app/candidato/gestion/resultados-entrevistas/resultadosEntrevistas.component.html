@@ -35,7 +35,10 @@
                             [disabled]="!entrevistasForm.valid" id="getBtn"
                             >{{'INTERVIEW_RESULTS.GetButton' | translate}}</button>
                    </form>
-                   <div *ngIf="showTable" class="row">
+                   <div>
+                    <hr/>
+                   </div>
+                   <div *ngIf="showTable" class="row candidate_name">
                     <div class="col-md-6">
                       <h4>{{'INTERVIEW_RESULTS.CandidateName' | translate}}</h4>
                     </div>
@@ -46,6 +49,7 @@
                    <div *ngIf="showTable" class="table-responsive">
                     <table class="table" id="resultsTable">
                       <caption>{{'INTERVIEW_RESULTS.TableDesc' | translate}}</caption>
+                      <th></th>
                       <tbody>
                         <tr *ngFor="let info of lista">
                           <td style="width:25%">
