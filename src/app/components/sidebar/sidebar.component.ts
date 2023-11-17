@@ -49,6 +49,7 @@ export function getRoutes() : RouteInfo[]{
   else{
     return [
       { path: '/equipos', title: 'Equipos',  icon: '', class: '' },
+      { path: '/resultadosEntrevistas', title: 'Resultado Entrevistas',  icon: '', class: '' },
     ];
   }
 }
