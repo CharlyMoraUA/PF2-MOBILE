@@ -28,6 +28,8 @@ import { CandidatoInfoService } from 'app/candidato/candidatoInfo.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ConsultarEquipoComponent } from 'app/empresa/consultar-equipo/consultar-equipo.component';
 import { DetallarRolComponent } from 'app/empresa/gestion-empresa/detallar-rol/detallar-rol.component';
+import { ResultadosEntrevistasComponent } from 'app/candidato/gestion/resultados-entrevistas/resultadosEntrevistas.component';
+import { ResultadosEntrevistasService } from 'app/candidato/resultadosEntrevistas.service';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -69,11 +71,13 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     UpgradeComponent,
     CandidatoInfoTecnicaComponent,
     ConsultarEquipoComponent,
-    DetallarRolComponent
+    DetallarRolComponent,
+    ResultadosEntrevistasComponent
   ],
   providers:[
     CandidatoCrearService,
-    CandidatoInfoService
+    CandidatoInfoService,
+    ResultadosEntrevistasService
   ]
 })
 

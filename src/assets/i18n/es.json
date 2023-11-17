@@ -131,5 +131,20 @@
         "add_rol":"Agregar rol",
         "return":"Regresar",
         "edit_rol":"Editar rol"
+    },
+    "INTERVIEW_RESULTS":{
+        "Title": "Consulta de entrevistas",
+        "DocumentType": "Tipo de documento",
+        "IdentificationCard": "Cédula de Ciudadanía",
+        "ForeignerCardId": "Cédula de extranjería",
+        "Passport": "Pasaporte",
+        "DocumentNumber": "Número de documento",
+        "GetButton": "Consultar",
+        "CandidateName": "Nombre del candidato:",
+        "InterviewName": "Nombre de la entrevista",
+        "BackButton": "Regresar",
+        "TableDesc": "Resultados de entrevistas actualizados",
+        "DateInterview": "Fecha entrevista",
+        "Result": "Resultado"
     }
 }
