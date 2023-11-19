@@ -12,7 +12,8 @@
         "User": "Usuario",
         "Password": "Contraseña",
         "Back": "Regresar",
-        "LogIn": "Iniciar Sesión"
+        "LogIn": "Iniciar Sesión",
+        "Change": "Olvide mi contraseña"
     },
     "CREATE_COMPANY":{
         "Title": "Registro de empresa",
@@ -146,5 +147,15 @@
         "TableDesc": "Resultados de entrevistas actualizados",
         "DateInterview": "Fecha entrevista",
         "Result": "Resultado"
+    },
+    "CAMBIO":{
+        "title": "Por favor, ingrese su correo electronico para reestablecer la contraseña:",
+        "mail": "Correo",
+        "close": "Cancelar",
+        "send": "Solicitar"
+    },
+    "ACEPT":{
+        "title": "Se envio un correo con los pasos a seguir para recuperar su contraseña.",
+        "acept": "Aceptar"
     }
 }

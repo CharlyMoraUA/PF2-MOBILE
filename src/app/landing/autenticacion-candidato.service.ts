@@ -21,4 +21,8 @@ export class AutenticacionCandidatoService {
     return this.http.post<any>(`${this.backUrl}/autenticacion/empresas/login`, { "usuario": usuario, "clave": clave });
   }
 
+  sendRecoveryEmail(email: string): Observable<any> {
+    return this.http.post<any>(`${this.backUrl}/autenticacion/passwordChange`, { "email": email });
+  }
+
 }

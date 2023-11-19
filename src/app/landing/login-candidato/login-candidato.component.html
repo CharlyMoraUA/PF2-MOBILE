@@ -4,7 +4,7 @@
       <div class="card">
           <div class="card-header card-header-danger text-center" >
               <h4 class="card-title">ABC JOBS</h4>
-              <p class="card-category" i18n="Candidate Login Title@@CandidateLoginTitle">Candidate LogIn</p>
+              <p class="card-category" i18n="Candidate Login Title@@CandidateLoginTitle">{{'LOGIN_CANDIDATE.Title'|translate}}</p>
           </div>
       </div>
       <div>
@@ -15,28 +15,28 @@
           <div>
               <div class="col-12" style="margin-top: 15%">
                   <mat-form-field class="example-full-width">
-                    <input #usuario novalidate matInput placeholder="User" formControlName="usuario" required i18n-placeholder="User input placeholder@@UserInputLabel">                        
+                    <input #usuario novalidate matInput placeholder="{{'LOGIN_CANDIDATE.User'|translate}}" formControlName="usuario" required i18n-placeholder="User input placeholder@@UserInputLabel">                        
                   </mat-form-field>
               </div>
               <div class="col-12" style="margin-top: 15%">
                   <mat-form-field class="example-full-width">
-                    <input #clave novalidate matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="clave" required i18n-placeholder="Password input placeholder@@PasswordInputLabel">
+                    <input #clave novalidate matInput placeholder="{{'LOGIN_CANDIDATE.Password'|translate}}" [type]="hide ? 'password' : 'text'" formControlName="clave" required i18n-placeholder="Password input placeholder@@PasswordInputLabel">
                     <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                   </mat-form-field>
                   
               </div>
-              <div class="col-12 text-center" style="margin-top: 20%">
-                  <a i18n="Password forgotten label@@passwordForgottenLabel">I forgot my password</a>
+              <div class="col-12 text-center" style="margin-top: 20%" (click)="openCambioModal()">
+                  {{'LOGIN_CANDIDATE.Change'|translate}}
               </div>
               <div class="row absolute bottom-0">
                 <div class="col-6">
-                  <button mat-raised-button class="btn btn-danger login_button" (click)="irCrearCuentaCandidato()" i18n="Create account button label@@CreateAccountButton">Create account</button>
+                  <button mat-raised-button class="btn btn-danger login_button" (click)="irCrearCuentaCandidato()" i18n="Create account button label@@CreateAccountButton">{{'LOGIN_CANDIDATE.Back'|translate}}</button>
                 </div>
                 <div class="col-6">
                     <button 
                     mat-raised-button class="btn btn-danger login_button" 
                     type="submit" 
-                    [disabled]="!loginCandidatoForm.valid" i18n="LogIn button label@@LogInButton">LogIn</button>
+                    [disabled]="!loginCandidatoForm.valid" i18n="LogIn button label@@LogInButton">{{'LOGIN_CANDIDATE.LogIn'|translate}}</button>
                 </div>
               </div>
           </div>
@@ -44,5 +44,14 @@
         </form>
     </div>
   </div>
+  </div>
+</div>
+
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon> 
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
   </div>
 </div>

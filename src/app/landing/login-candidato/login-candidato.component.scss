@@ -18,3 +18,9 @@
   background-color: white;
   min-height: 100vh !important;
 }
+
+::ng-deep .my-custom-dialog-class {
+  mat-dialog-container {
+    background-color: gray;
+  }
+}
