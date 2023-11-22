@@ -6,6 +6,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ToastrModule } from 'ngx-toastr';
 import { LoginCandidatoComponent } from './login-candidato.component';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { TranslateModule, TranslateLoader, TranslateFakeLoader } from '@ngx-translate/core';
 
 describe('LoginCandidatoComponent', () => {
   let component: LoginCandidatoComponent;
@@ -18,9 +20,20 @@ describe('LoginCandidatoComponent', () => {
       imports: [HttpClientTestingModule, 
         ReactiveFormsModule, 
         FormsModule,
-        ToastrModule.forRoot()
+        ToastrModule.forRoot(),
+        MatDialogModule,
+        TranslateModule.forRoot({
+          loader: {
+            provide: TranslateLoader,
+            useClass: TranslateFakeLoader
+          }
+        })
       ],
-      declarations: [ LoginCandidatoComponent ]
+      declarations: [ LoginCandidatoComponent ],
+      providers: [ {
+        provide: MatDialogRef,
+        useValue: {}
+      }, ]
     })
     .compileComponents();
   }));

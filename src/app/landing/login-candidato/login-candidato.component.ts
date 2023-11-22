@@ -4,6 +4,10 @@ import { Router } from '@angular/router';
 import { AutenticacionCandidatoService } from '../autenticacion-candidato.service';
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { ToastrService } from 'ngx-toastr';
+import { MatDialog } from '@angular/material/dialog';
+import { CambioContrasenaComponent } from '../cambio-contrasena/cambio-contrasena.component';
+import { AceptarCambioComponent } from '../aceptar-cambio/aceptar-cambio.component';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -18,7 +22,14 @@ export class LoginCandidatoComponent implements OnInit {
     private _router: Router,
     private autenticacionCandidatoService: AutenticacionCandidatoService,
     private toastr: ToastrService,
-  ) { }
+    public dialog: MatDialog,
+    public translate: TranslateService
+  ) {
+      // Register translation languages
+      translate.addLangs(['en', 'es']);
+      // Set default language
+      translate.setDefaultLang('es');
+   }
 
   error: boolean = false
   helper = new JwtHelperService();
@@ -57,6 +68,29 @@ export class LoginCandidatoComponent implements OnInit {
 
   irCrearCuentaCandidato(){
     this._router.navigate(["candidato"])
+  }
+
+  openCambioModal(){
+    const dialogRef = this.dialog.open(CambioContrasenaComponent, {
+      height: '300px',
+      width: '400px',
+      panelClass: 'my-custom-dialog-class',
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result.done){
+        const dialogRef2 = this.dialog.open(AceptarCambioComponent, {
+          height: '200px',
+          width: '400px',
+          panelClass: 'my-custom-dialog-class',
+        });
+      }
+    })
+    return true;
+  }
+
+  //Switch language
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
   }
 
 }

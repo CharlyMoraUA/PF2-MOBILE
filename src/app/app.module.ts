@@ -24,6 +24,9 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AgregarRolComponent } from './empresa/gestion-empresa/agregar-rol/agregar-rol.component';
 import { LandingComponent } from './landing/landing/landing.component';
+import { CambioContrasenaComponent } from './landing/cambio-contrasena/cambio-contrasena.component';
+import { MatDialogModule} from '@angular/material/dialog';
+import { AceptarCambioComponent } from './landing/aceptar-cambio/aceptar-cambio.component';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -32,6 +35,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
 
 @NgModule({
   imports: [
+    MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -69,6 +73,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     HistorialEntrevistasComponent,
     AgregarRolComponent,
     LandingComponent,
+    CambioContrasenaComponent,
+    AceptarCambioComponent,
   ],
   providers:[ToastrService],
   bootstrap: [AppComponent]

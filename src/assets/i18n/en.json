@@ -12,7 +12,8 @@
         "User": "User Name",
         "Password": "Password",
         "Back": "Back",
-        "LogIn": "Log In"
+        "LogIn": "Log In",
+        "Change": "I forgot my password"
     },
     "CREATE_COMPANY":{
         "Title": "Company Sign Up",
@@ -146,5 +147,15 @@
         "DateInterview": "Date interview",
         "Result": "Result"
 
+    },
+    "CAMBIO":{
+        "title": "Please input your email to reset your password",
+        "mail": "Email",
+        "close": "Cancel",
+        "send": "Send Email"
+    },
+    "ACEPT":{
+        "title": "A Email was sent with the next steps requiered to reset your password",
+        "acept": "Acept"
     }
 }

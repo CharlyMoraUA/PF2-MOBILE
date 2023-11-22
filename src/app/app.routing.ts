@@ -7,6 +7,7 @@ import { CandidatoComponent } from './candidato/candidato-crear/candidato.compon
 import { LoginCandidatoComponent } from './landing/login-candidato/login-candidato.component';
 import { LoginEmpresaComponent } from './landing/login-empresa/login-empresa.component';
 import { LandingComponent } from './landing/landing/landing.component';
+import { CambioContrasenaComponent } from './landing/cambio-contrasena/cambio-contrasena.component';
 
 const routes: Routes =[
   {
