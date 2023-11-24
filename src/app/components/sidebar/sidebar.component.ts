@@ -43,6 +43,7 @@ export function getRoutes() : RouteInfo[]{
   if(usertype == 'candidato'){
     return [
       { path: '/info_tecnica', title: 'Información técnica',  icon:'', class: '' },
+      { path: '/info_laboral', title: 'Información laboral',  icon:'', class: '' },
       { path: '/historial_entrevistas', title: 'Historial de Entrevistas',  icon:'', class: '' },
     ];
   }
