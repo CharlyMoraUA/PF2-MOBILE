@@ -50,6 +50,7 @@ export function getRoutes() : RouteInfo[]{
     return [
       { path: '/equipos', title: 'Equipos',  icon: '', class: '' },
       { path: '/resultadosEntrevistas', title: 'Resultado Entrevistas',  icon: '', class: '' },
+      { path: '/resultadosPruebasTecnicas', title: 'Resultados pruebas tecnicas',  icon: '', class: '' },
     ];
   }
 }
