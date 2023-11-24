@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { ConsultarResultadosPruebasService } from '../consultar-resultados-pruebas.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consultar-resultados-pruebas-tecnicas',
@@ -12,6 +13,7 @@ export class ConsultarResultadosPruebasTecnicasComponent implements OnInit {
   consultarPruebasForm!: FormGroup;
 
   constructor(
+    public _router: Router,
     private formBuilder: FormBuilder,
     private consultarResultadosPruebasService: ConsultarResultadosPruebasService,
     public translate: TranslateService
@@ -57,9 +59,14 @@ export class ConsultarResultadosPruebasTecnicasComponent implements OnInit {
 
   }
 
-    //Switch language
-    translateLanguageTo(lang: string) {
-      this.translate.use(lang);
-    }
+  //Switch language
+  translateLanguageTo(lang: string) {
+    this.translate.use(lang);
+  }
+
+  backToHome(){
+    this._router.navigate(["dashboard"])
+
+  }
 
 }
