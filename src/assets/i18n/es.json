@@ -171,5 +171,24 @@
         "Description": "Actividades realizadas",
         "AddButton": "Guardar",
         "ModalTitle": "Agregar información laboral"
+    },
+    "ACADEMIC_INFO":{
+        "Title": "ABC JOBS",
+        "SkillType": "Info Academica",
+        "Skill": "Habilidad",
+        "BackButton": "Regresar",
+        "Technology": "",
+        "Language": "Lenguaje",
+        "Rol": "Roles"
+    },
+    "CONSULTAR_RESULTADOS_PRUEBAS":{
+        "titulo":"Consultar resultados de pruebas tecnicas",
+        "numerodocumento":"Numero de documento del candidato",
+        "maxchar":"Maximo 100 caracteres",
+        "consultar":"Consultar",
+        "name":"Nombre",
+        "fecha":"Fecha prueba",
+        "resultado":"Resultado",
+        "sinresultado":"No hay resultados apra este documento"
     }
 }

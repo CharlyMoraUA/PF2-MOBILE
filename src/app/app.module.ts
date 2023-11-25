@@ -8,7 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { MatButtonModule } from '@angular/material/button';
-import { MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -27,6 +27,10 @@ import { LandingComponent } from './landing/landing/landing.component';
 import { CambioContrasenaComponent } from './landing/cambio-contrasena/cambio-contrasena.component';
 import { MatDialogModule} from '@angular/material/dialog';
 import { AceptarCambioComponent } from './landing/aceptar-cambio/aceptar-cambio.component';
+import { EvaluacionCandidatoComponent } from './empresa/evaluacion-candidato/evaluacion-candidato.component';
+import { CandidatoInfoAcademicaComponent } from './candidato/candidato-info-academica/candidato-info-academica.component';
+import { CrearInfoAcademicaComponent } from './candidato/crear-info-academica/crear-info-academica.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -35,6 +39,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
 
 @NgModule({
   imports: [
+    MatDatepickerModule, MatNativeDateModule,
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -75,8 +80,11 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     LandingComponent,
     CambioContrasenaComponent,
     AceptarCambioComponent,
+    EvaluacionCandidatoComponent,
+    CandidatoInfoAcademicaComponent,
+    CrearInfoAcademicaComponent,
   ],
-  providers:[ToastrService],
+  providers:[ToastrService,MatDatepickerModule, MatNativeDateModule,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

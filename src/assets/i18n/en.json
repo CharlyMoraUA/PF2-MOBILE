@@ -101,6 +101,15 @@
         "Language": "Language",
         "Rol": "Roles"
     },
+    "ACADEMIC_INFO":{
+        "Title": "ABC JOBS",
+        "SkillType": "Academic Info",
+        "Skill": "Skill",
+        "BackButton": "Back",
+        "Technology": "",
+        "Language": "Language",
+        "Rol": "Roles"
+    },
     "LOGIN_COMPANY":{
         "title":"Company Login",
         "inputUser":"User",
@@ -171,5 +180,15 @@
         "Description": "Duties",
         "AddButton": "Save",
         "ModalTitle": "Add working information"
+    },
+    "CONSULTAR_RESULTADOS_PRUEBAS":{
+        "titulo":"See technical tests results",
+        "numerodocumento":"Candidate document number",
+        "maxchar":"100 characters max",
+        "consultar":"Consult",
+        "name":"Name",
+        "fecha":"Test date",
+        "resultado":"Result",
+        "sinresultado":"No matches for this document"
     }
 }

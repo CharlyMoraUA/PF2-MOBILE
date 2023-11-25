@@ -32,6 +32,7 @@ import { ResultadosEntrevistasComponent } from 'app/candidato/gestion/resultados
 import { ResultadosEntrevistasService } from 'app/candidato/resultadosEntrevistas.service';
 import { CandidatoInfoLaboralComponent } from 'app/candidato/candidato-infoLaboral/candidato-infoLaboral.component';
 import { NuevaInfoLaboralComponent } from 'app/candidato/candidato-infoLaboral/nuevaInfoLaboral.component';
+import { ConsultarResultadosPruebasTecnicasComponent } from 'app/empresa/consultar-resultados-pruebas-tecnicas/consultar-resultados-pruebas-tecnicas.component';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -76,7 +77,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     DetallarRolComponent,
     ResultadosEntrevistasComponent,
     CandidatoInfoLaboralComponent,
-    NuevaInfoLaboralComponent
+    NuevaInfoLaboralComponent,
+    ConsultarResultadosPruebasTecnicasComponent
   ],
   providers:[
     CandidatoCrearService,

@@ -1,0 +1,70 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger text-center">
+                      <h4 class="card-title" i18n="Technical information title@@TechnicalInformationTitle">{{'ACADEMIC_INFO.Title' | translate}}</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row" style="padding-bottom:7%">
+                        <div class="col-9">
+                          <h5>{{'ACADEMIC_INFO.SkillType' | translate}}</h5>
+                        </div>
+                        <div class="col-3">
+                            <mat-icon (click)="openDialog()">add</mat-icon>
+                        </div>
+                      </div>
+                     
+                      
+                      <div *ngFor="let item of lista">
+                        <div class="row">
+                          <div class="col-10">
+                            <div class="row">
+                              <strong>
+                                {{item.institucion}}
+                              </strong>
+                            </div>
+                            <div class="row">
+                              {{item.titulo}}
+                            </div>
+                            <div class="row">
+                              {{item.fecha_inicio}} - {{item.fecha_fin}}
+                            </div>
+                          </div> 
+                          <div class="col-2">
+                            <mat-icon>edit</mat-icon>
+                            <mat-icon>delete</mat-icon>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <hr/>
+                        </div>
+                      </div>
+
+
+                      <div class="row">
+                        <div class="col-lg-4 col-md-6 ml-auto mr-auto">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <button mat-raised-button class="btn btn-danger btn-block" (click)="backToInfo()" i18n="Back button@@BackButton">{{'ACADEMIC_INFO.BackButton' | translate}}</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="copyright pull-right" style="margin-right: 5%;">
+    <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+        <mat-icon>translate</mat-icon> 
+        <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" class="select-lang" id="sel-lang" #selLang (change)="translateLanguageTo(selLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+        </select>
+    </div>
+  </div>
+  

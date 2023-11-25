@@ -53,6 +53,29 @@ agregarInfoLaboral(infoLaboral: infoLaboral, token: string): Observable<any> {
     'Authorization': `Bearer ${token}`
   }) 
   return this.http.post<any>(this.apiUrl+"infoLaboral", infoLaboral, { headers: headers });
+
+}
+
+obtenerInfoAcademica(id_candidato, token: string): Observable<any> {
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  return this.http.get<any>(this.apiUrl+"infoAcademica?id_candidato="+id_candidato, { headers: headers})
+}
+
+agregarInfoAcademica(institucion:any,titulo:any,fecha_inicio:any,fecha_fin:any,id_candidato:any,token: string): Observable<any> {
+  const headers = new HttpHeaders({
+    'Authorization': `Bearer ${token}`
+  })
+  return this.http.post<any>(this.apiUrl+"infoAcademica", 
+  {
+    "institucion":institucion,
+    "titulo":titulo,
+    "fecha_inicio":fecha_inicio,
+    "fecha_fin":fecha_fin,
+    "id_candidato":id_candidato
+  }
+  , { headers: headers });
 }
 
 }
