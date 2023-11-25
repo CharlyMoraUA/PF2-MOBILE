@@ -1,15 +1,7 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CandidatoInfoService } from '../candidatoInfo.service';
-import { MAT_DIALOG_DATA, MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
-import { infoLaboral } from '../representaciones/infoLaboral';
-import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
 
 export interface DialogData {
   cargo: string;
@@ -36,8 +28,6 @@ export class CandidatoInfoLaboralComponent implements OnInit {
   constructor(
     private candidatoInfoService: CandidatoInfoService,
     private _router: Router,
-    public dialog: MatDialog,
-    private toastr: ToastrService,
     public translate: TranslateService,
   ) {
     // Register translation languages
