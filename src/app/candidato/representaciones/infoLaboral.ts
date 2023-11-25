@@ -12,13 +12,13 @@ export class infoLaboral{
         ano_fin : number,
         empresa : string,
         descripcion : string,
-        id_canidato : number,
+        id_candidato : number,
     ){
         this.cargo = cargo;
         this.ano_inicio = ano_inicio; 
         this.ano_fin = ano_fin;
         this.empresa = empresa;
         this.descripcion = descripcion;
-        this.id_candidato = id_canidato;
+        this.id_candidato = id_candidato;
     }
 }

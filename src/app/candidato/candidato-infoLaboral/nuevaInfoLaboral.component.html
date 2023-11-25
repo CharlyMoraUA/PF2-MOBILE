@@ -1,3 +1,81 @@
-<p>
-  nuevaInfoLaboral works!
-</p>
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger text-center">
+            <h4 class="card-title">ABC JOBS</h4>
+          </div>
+          <div class="text-center">
+            <h5>{{'WORKING_INFO.Title' | translate}}</h5>
+          </div>
+          <div class="card-body">
+            <form
+            [formGroup]="nuevaInfoLaboralForm"
+            (ngSubmit)="!nuevaInfoLaboralForm.invalid && agregaInfoLaboral(nuevaInfoLaboralForm.value)"
+            >
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field>
+                  <input novalidate matInput placeholder="{{'WORKING_INFO.Position' | translate}}" formControlName="cargo" id="cargoText" class="underline">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field>
+                  <mat-label>{{'WORKING_INFO.Company' | translate}}</mat-label>
+                  <input novalidate matInput formControlName="empresa" id="empresaText" class="underline">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                  <mat-label>{{'WORKING_INFO.StartYear' | translate}}</mat-label>
+              </div>
+              <div class="col-6">
+                <mat-form-field>
+                  <input novalidate matInput formControlName="ano_inicio" id="anoInicioText" class="inputDate">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                  <mat-label>{{'WORKING_INFO.EndYear' | translate}}</mat-label>
+              </div>
+              <div class="col-6">
+                <mat-form-field>
+                  <input novalidate matInput formControlName="ano_fin" id="anoFinText" class="inputDate">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="{{'WORKING_INFO.Description' | translate}}" rows="6" formControlName="descripcion" id="descripcionText" class="inputDate"></textarea>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button mat-raised-button class="btn btn-danger btn-block" (click)="backToInfoLaboral()" id="regresar">{{'WORKING_INFO.BackButton' | translate}}</button>
+              </div>
+              <div class="col-6">
+                <button mat-raised-button class="btn btn-danger btn-block" type="submit" [disabled]="!nuevaInfoLaboralForm.valid" id="agregarInfoLaboralBtn">{{'WORKING_INFO.AddButton' | translate}}</button>
+              </div>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright pull-right" style="margin-right: 5%;">
+    <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+        <mat-icon>translate</mat-icon> 
+        <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" #selLang (change)="translateLanguageTo(selLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+        </select>
+    </div>
+  </div>
+</div>

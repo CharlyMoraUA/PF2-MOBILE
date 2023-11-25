@@ -161,15 +161,15 @@
     },
     "WORKING_INFO":{
         "Title": "Información laboral",
-        "Position": "Cargo",
-        "Company": "Empresa",
+        "Position": "Cargo desempeñado",
+        "Company": "Nombre de la compañía",
         "StartYear": "Año de inicio",
         "EndYear": "Año de fin",
         "TableDescription": "Lista actual de información laboral",
-        "BackButton": "Regresar",
+        "BackButton": "Volver",
         "WorkExperience": "Experiencia laboral",
-        "Description": "Descripción",
-        "AddButton": "Agregar",
+        "Description": "Actividades realizadas",
+        "AddButton": "Guardar",
         "ModalTitle": "Agregar información laboral"
     }
 }

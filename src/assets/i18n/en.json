@@ -161,15 +161,15 @@
     },
     "WORKING_INFO":{
         "Title": "Working information",
-        "Position": "Postition",
-        "Company": "Company",
+        "Position": "Position",
+        "Company": "Company name",
         "StartYear": "Start year",
         "EndYear": "End year",
         "TableDescription": "Current working information list",
         "BackButton": "Back",
         "WorkExperience": "Work experience",
-        "Description": "Description",
-        "AddButton": "Add",
+        "Description": "Duties",
+        "AddButton": "Save",
         "ModalTitle": "Add working information"
     }
 }

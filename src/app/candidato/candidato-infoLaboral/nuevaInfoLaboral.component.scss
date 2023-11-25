@@ -1,0 +1,36 @@
+mat-label{
+    color: #9C9C9C;
+}
+
+.card{
+    padding-bottom: 10px;
+    padding-top: 0px;
+    border-top: 0px;
+    margin-top: 0px;
+}
+
+.inputDate{
+    box-shadow: 0 8px 6px -6px #9C9C9C;
+}
+
+::ng-deep .mat-form-field-underline{
+    display: none;
+}
+
+.underline{
+    border-bottom: 1.5px solid #9C9C9C;
+}
+
+::ng-deep .mat-form-field-placeholder{
+    font-size: x-small;
+}
+
+h5{
+    font-size: large;
+    color: #6D6C6C;
+    text-align: center;
+}
+
+.card-header{
+    margin-bottom: 20px;
+}
