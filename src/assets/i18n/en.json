@@ -157,5 +157,15 @@
     "ACEPT":{
         "title": "A Email was sent with the next steps requiered to reset your password",
         "acept": "Acept"
+    },
+    "CONSULTAR_RESULTADOS_PRUEBAS":{
+        "titulo":"See technical tests results",
+        "numerodocumento":"Candidate document number",
+        "maxchar":"100 characters max",
+        "consultar":"Consult",
+        "name":"Name",
+        "fecha":"Test date",
+        "resultado":"Result",
+        "sinresultado":"No matches for this document"
     }
 }

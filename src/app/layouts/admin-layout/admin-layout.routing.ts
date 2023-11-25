@@ -12,6 +12,7 @@ import { HistorialEntrevistasComponent } from 'app/candidato/gestion/historial-e
 import { CandidatoInfoTecnicaComponent } from 'app/candidato/candidato-infoTecnica/candidatoInfoTecnica/candidatoInfoTecnica.component';
 import { ConsultarEquipoComponent } from 'app/empresa/consultar-equipo/consultar-equipo.component';
 import { ResultadosEntrevistasComponent } from 'app/candidato/gestion/resultados-entrevistas/resultadosEntrevistas.component';
+import { ConsultarResultadosPruebasTecnicasComponent } from 'app/empresa/consultar-resultados-pruebas-tecnicas/consultar-resultados-pruebas-tecnicas.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -68,4 +69,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'info_tecnica',   component: CandidatoInfoTecnicaComponent },
     { path: 'equipos',        component: ConsultarEquipoComponent },
     { path: 'resultadosEntrevistas',  component: ResultadosEntrevistasComponent },
+    { path: 'resultadosPruebasTecnicas',  component: ConsultarResultadosPruebasTecnicasComponent },
 ];
