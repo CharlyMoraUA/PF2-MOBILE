@@ -43,6 +43,7 @@ export function getRoutes() : RouteInfo[]{
   if(usertype == 'candidato'){
     return [
       { path: '/info_tecnica', title: 'Información técnica',  icon:'', class: '' },
+      { path: '/info_academica', title: 'Información academica',  icon:'', class: '' },
       { path: '/historial_entrevistas', title: 'Historial de Entrevistas',  icon:'', class: '' },
     ];
   }
@@ -50,6 +51,8 @@ export function getRoutes() : RouteInfo[]{
     return [
       { path: '/equipos', title: 'Equipos',  icon: '', class: '' },
       { path: '/resultadosEntrevistas', title: 'Resultado Entrevistas',  icon: '', class: '' },
+      { path: '/evaluacionCandidatos', title: 'Evaluacion Candidatos',  icon: '', class: '' },
+      
     ];
   }
 }

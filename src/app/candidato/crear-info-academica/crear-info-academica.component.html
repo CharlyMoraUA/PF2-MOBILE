@@ -1,0 +1,54 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <div class="card">
+            <div class="card-body"> -->
+              <div class="row">
+                <div class="col-md-12 text-center">
+                  <mat-form-field>
+                    <mat-label>Institucion Academica</mat-label>
+                    <input required matInput [(ngModel)]="data.institucion">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                  <mat-form-field>
+                    <mat-label>Titulo Obtenido</mat-label>
+                    <input required matInput [(ngModel)]="data.titulo">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                  <mat-form-field>
+                    <mat-label>Fecha inicio</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="data.fecha_inicio">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                  <mat-form-field>
+                    <mat-label>Fecha Finalizacion</mat-label>
+                    <input matInput [matDatepicker]="picker2" [(ngModel)]="data.fecha_fin">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-md-4 ml-auto mr-auto">
+                  <div class="row">
+                    <div class="col-6" style="padding: 2px;">
+                      <button mat-raised-button class="btn btn-danger btn-block text-center" style="padding: 0px;padding-top:10%;padding-bottom:10%;" (click)="onNoClick()">Cancelar</button>
+                    </div>
+                    <div class="col-6" style="padding: 2px">
+                      <button mat-raised-button class="btn btn-danger btn-block text-center" style="padding: 0px;padding-top:10%;padding-bottom:10%;" [disabled]="!data.institucion  || !data.titulo || !data.fecha_inicio || !data.fecha_fin" [mat-dialog-close]="data" cdkFocusInitial>Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -157,5 +157,14 @@
     "ACEPT":{
         "title": "Se envio un correo con los pasos a seguir para recuperar su contraseña.",
         "acept": "Aceptar"
+    },
+    "ACADEMIC_INFO":{
+        "Title": "ABC JOBS",
+        "SkillType": "Info Academica",
+        "Skill": "Habilidad",
+        "BackButton": "Regresar",
+        "Technology": "",
+        "Language": "Lenguaje",
+        "Rol": "Roles"
     }
 }
