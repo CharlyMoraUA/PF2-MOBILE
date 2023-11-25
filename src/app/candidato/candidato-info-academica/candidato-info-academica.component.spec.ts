@@ -12,7 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 
-fdescribe('CandidatoInfoAcademicaComponent', () => {
+describe('CandidatoInfoAcademicaComponent', () => {
   let component: CandidatoInfoAcademicaComponent;
   let fixture: ComponentFixture<CandidatoInfoAcademicaComponent>;
 
