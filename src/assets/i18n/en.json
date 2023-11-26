@@ -190,5 +190,12 @@
         "fecha":"Test date",
         "resultado":"Result",
         "sinresultado":"No matches for this document"
+    },
+    "EVALUAR_CANDIDATO":{
+        "titulo":"EVALUATE CANDIDATE",
+        "numerodocumento":"Candidate Id Document",
+        "consultar":"Check",
+        "back":"Back",
+        "nuevo": "New Evaluation"
     }
 }

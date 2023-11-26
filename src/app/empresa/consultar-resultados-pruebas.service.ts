@@ -22,4 +22,24 @@ export class ConsultarResultadosPruebasService {
   obtenerPruebas(documento: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}candidato/pruebas/${documento}`, this.httpOptions);
   }
+
+
+  obtenerEmpleado(documento: string): Observable<any> {
+    return this.http.get<any>(`${environment.urlBaseEquipos}empleados/${documento}`, this.httpOptions);
+  }
+
+
+  postReview(id_candidato:any, mensaje:any, promedio:any, token: string){
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    })
+    return this.http.post<any>(environment.urlBaseEquipos+"proyectos/evaluacion/"+id_candidato, {
+      
+        "evaluacion": mensaje,
+        "puntaje":promedio
+    
+    }, { headers: headers });
+  }
+
+
 }

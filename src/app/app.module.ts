@@ -31,6 +31,7 @@ import { EvaluacionCandidatoComponent } from './empresa/evaluacion-candidato/eva
 import { CandidatoInfoAcademicaComponent } from './candidato/candidato-info-academica/candidato-info-academica.component';
 import { CrearInfoAcademicaComponent } from './candidato/crear-info-academica/crear-info-academica.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NuevaEvaluacionCandidatoComponent } from './empresa/nueva-evaluacion-candidato/nueva-evaluacion-candidato.component';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -83,6 +84,7 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     EvaluacionCandidatoComponent,
     CandidatoInfoAcademicaComponent,
     CrearInfoAcademicaComponent,
+    NuevaEvaluacionCandidatoComponent,
   ],
   providers:[ToastrService,MatDatepickerModule, MatNativeDateModule,],
   bootstrap: [AppComponent]
