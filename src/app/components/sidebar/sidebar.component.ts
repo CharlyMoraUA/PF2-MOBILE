@@ -42,8 +42,9 @@ export function getRoutes() : RouteInfo[]{
   console.log('usertype is: ', usertype)
   if(usertype == 'candidato'){
     return [
-      { path: '/info_tecnica', title: 'Información técnica',  icon:'', class: '' },
       { path: '/info_academica', title: 'Información academica',  icon:'', class: '' },
+      { path: '/info_tecnica', title: 'Información técnica',  icon:'', class: '' },
+      { path: '/info_laboral', title: 'Información laboral',  icon:'', class: '' },
       { path: '/historial_entrevistas', title: 'Historial de Entrevistas',  icon:'', class: '' },
     ];
   }

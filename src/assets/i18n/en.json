@@ -13,7 +13,8 @@
         "Password": "Password",
         "Back": "Back",
         "LogIn": "Log In",
-        "Change": "I forgot my password"
+        "Change": "I forgot my password", 
+        "CreateAccount": "Create Account"
     },
     "CREATE_COMPANY":{
         "Title": "Company Sign Up",
@@ -166,6 +167,19 @@
     "ACEPT":{
         "title": "A Email was sent with the next steps requiered to reset your password",
         "acept": "Acept"
+    },
+    "WORKING_INFO":{
+        "Title": "Working information",
+        "Position": "Position",
+        "Company": "Company name",
+        "StartYear": "Start year",
+        "EndYear": "End year",
+        "TableDescription": "Current working information list",
+        "BackButton": "Back",
+        "WorkExperience": "Work experience",
+        "Description": "Duties",
+        "AddButton": "Save",
+        "ModalTitle": "Add working information"
     },
     "CONSULTAR_RESULTADOS_PRUEBAS":{
         "titulo":"See technical tests results",

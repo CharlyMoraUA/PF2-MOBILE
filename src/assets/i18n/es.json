@@ -13,7 +13,8 @@
         "Password": "Contraseña",
         "Back": "Regresar",
         "LogIn": "Iniciar Sesión",
-        "Change": "Olvide mi contraseña"
+        "Change": "Olvide mi contraseña",
+        "CreateAccount": "Crear cuenta"
     },
     "CREATE_COMPANY":{
         "Title": "Registro de empresa",
@@ -157,6 +158,19 @@
     "ACEPT":{
         "title": "Se envio un correo con los pasos a seguir para recuperar su contraseña.",
         "acept": "Aceptar"
+    },
+    "WORKING_INFO":{
+        "Title": "Información laboral",
+        "Position": "Cargo desempeñado",
+        "Company": "Nombre de la compañía",
+        "StartYear": "Año de inicio",
+        "EndYear": "Año de fin",
+        "TableDescription": "Lista actual de información laboral",
+        "BackButton": "Volver",
+        "WorkExperience": "Experiencia laboral",
+        "Description": "Actividades realizadas",
+        "AddButton": "Guardar",
+        "ModalTitle": "Agregar información laboral"
     },
     "ACADEMIC_INFO":{
         "Title": "ABC JOBS",

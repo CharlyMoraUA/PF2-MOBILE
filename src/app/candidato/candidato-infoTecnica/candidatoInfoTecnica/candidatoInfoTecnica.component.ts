@@ -74,19 +74,22 @@ export class CandidatoInfoTecnicaComponent implements OnInit {
       console.log("valor: ", result.valor)
       if (this.tipo && this.valor) {
         this.guardarInfoTecnica()
+      }else{
+        this.toastr.error("Error", "Faltan campos por llenar")
       }
-      
     });
   }
 
   guardarInfoTecnica(){
     let id_candidato: number = + sessionStorage.getItem("id_candidato")
-    console.log("El id del candidato es: ", id_candidato)
     let infotecnica = new infoTecnica(1, this.tipo, this.valor, id_candidato)
     this.candidatoInfoService.agregarInfoTecnica(infotecnica, sessionStorage.getItem("candidato-token")).subscribe(res => {
       if (res.status_code == "201"){
         this.toastr.success("Información técnica guardada correctamente")
         console.info("Información técnica guardada correctamente: ", res)
+        setTimeout(() => {
+          this.consultarInfoTecnica(sessionStorage.getItem("id_candidato"))
+        }, 500)
       }else{
         this.error = true
         this.toastr.error("Error", res.message)
