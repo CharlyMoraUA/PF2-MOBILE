@@ -176,5 +176,12 @@
         "fecha":"Fecha prueba",
         "resultado":"Resultado",
         "sinresultado":"No hay resultados apra este documento"
+    },
+    "EVALUAR_CANDIDATO":{
+        "titulo":"EVALUAR CANDIDATO",
+        "numerodocumento":"Numero de documento del candidato",
+        "consultar":"Consultar",
+        "back":"regresar",
+        "nuevo": "Nueva Evaluacion"
     }
 }

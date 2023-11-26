@@ -1,0 +1,30 @@
+<div class="card-body">
+    <div>
+      <h5 class="mat-h2">Evaluacion de desempeño:</h5>
+    </div>
+    <div class="horizontal-line"></div>
+    <div class="row">
+        <div class="col-lg-6 col-md-12 ml-auto mr-auto">
+            <mat-form-field appearance="fill" class="fill-container">
+                <mat-label>Textarea</mat-label>
+                <textarea matInput style="height: 50%; width:100%" [(ngModel)]="mensaje"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="col-md-12 d-flex justify-content-center">
+        <mat-form-field>
+            <mat-select  placeholder="Resultado Promedio" [(ngModel)]="selectedScore">
+              <mat-option  [value]=1>1. Rendimiento pobre</mat-option>
+              <mat-option  [value]=2>2. Por debajo del promedio</mat-option>
+              <mat-option  [value]=3>3. Alcanzo resultados</mat-option>
+              <mat-option  [value]=4>4. Excedio espectativas</mat-option>
+              <mat-option  [value]=5>5. Alto rendimiento</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <br>
+    <div class="col-md-12 d-flex justify-content-center">
+      <button mat-raised-button class="btn center btn-danger" (click)="close()" >{{'EVALUAR_CANDIDATO.back' | translate}}</button>
+      <button mat-raised-button class="btn center btn-danger"  (click)="postReview()">{{'EVALUAR_CANDIDATO.consultar' | translate}}</button>
+    </div>
+</div>

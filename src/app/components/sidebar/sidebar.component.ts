@@ -52,6 +52,7 @@ export function getRoutes() : RouteInfo[]{
       { path: '/equipos', title: 'Equipos',  icon: '', class: '' },
       { path: '/resultadosEntrevistas', title: 'Resultado Entrevistas',  icon: '', class: '' },
       { path: '/resultadosPruebasTecnicas', title: 'Resultados pruebas tecnicas',  icon: '', class: '' },
+      { path: '/evaluacionCandidatos', title: 'Evaluacion Candidatos',  icon: '', class: '' },
     ];
   }
 }

@@ -14,6 +14,7 @@ import { ConsultarEquipoComponent } from 'app/empresa/consultar-equipo/consultar
 import { ResultadosEntrevistasComponent } from 'app/candidato/gestion/resultados-entrevistas/resultadosEntrevistas.component';
 import { CandidatoInfoAcademicaComponent } from 'app/candidato/candidato-info-academica/candidato-info-academica.component';
 import { ConsultarResultadosPruebasTecnicasComponent } from 'app/empresa/consultar-resultados-pruebas-tecnicas/consultar-resultados-pruebas-tecnicas.component';
+import { EvaluacionCandidatoComponent } from 'app/empresa/evaluacion-candidato/evaluacion-candidato.component';
 
 
 export const AdminLayoutRoutes: Routes = [

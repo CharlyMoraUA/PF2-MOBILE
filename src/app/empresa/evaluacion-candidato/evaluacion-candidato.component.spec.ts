@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateModule } from '@ngx-translate/core';
 import { ToastrModule } from 'ngx-toastr';
+import { MatDialogModule } from '@angular/material/dialog';
 
 describe('EvaluacionCandidatoComponent', () => {
   let component: EvaluacionCandidatoComponent;
@@ -18,14 +19,9 @@ describe('EvaluacionCandidatoComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EvaluacionCandidatoComponent ],
-      imports: [HttpClientTestingModule, 
-        MatFormFieldModule ,
-        ReactiveFormsModule, 
-        MatInputModule,
-        MatSelectModule,
-        MatIconModule,
-        FormsModule,
-        BrowserAnimationsModule,
+      imports: [
+        MatDialogModule,
+        HttpClientTestingModule,
         ToastrModule.forRoot(),
         TranslateModule.forRoot()
       ],
