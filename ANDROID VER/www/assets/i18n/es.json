@@ -12,7 +12,9 @@
         "User": "Usuario",
         "Password": "Contraseña",
         "Back": "Regresar",
-        "LogIn": "Iniciar Sesión"
+        "LogIn": "Iniciar Sesión",
+        "Change": "Olvide mi contraseña",
+        "CreateAccount": "Crear cuenta"
     },
     "CREATE_COMPANY":{
         "Title": "Registro de empresa",
@@ -131,5 +133,69 @@
         "add_rol":"Agregar rol",
         "return":"Regresar",
         "edit_rol":"Editar rol"
+    },
+    "INTERVIEW_RESULTS":{
+        "Title": "Consulta de entrevistas",
+        "DocumentType": "Tipo de documento",
+        "IdentificationCard": "Cédula de Ciudadanía",
+        "ForeignerCardId": "Cédula de extranjería",
+        "Passport": "Pasaporte",
+        "DocumentNumber": "Número de documento",
+        "GetButton": "Consultar",
+        "CandidateName": "Nombre del candidato:",
+        "InterviewName": "Nombre de la entrevista",
+        "BackButton": "Regresar",
+        "TableDesc": "Resultados de entrevistas actualizados",
+        "DateInterview": "Fecha entrevista",
+        "Result": "Resultado"
+    },
+    "CAMBIO":{
+        "title": "Por favor, ingrese su correo electronico para reestablecer la contraseña:",
+        "mail": "Correo",
+        "close": "Cancelar",
+        "send": "Solicitar"
+    },
+    "ACEPT":{
+        "title": "Se envio un correo con los pasos a seguir para recuperar su contraseña.",
+        "acept": "Aceptar"
+    },
+    "WORKING_INFO":{
+        "Title": "Información laboral",
+        "Position": "Cargo desempeñado",
+        "Company": "Nombre de la compañía",
+        "StartYear": "Año de inicio",
+        "EndYear": "Año de fin",
+        "TableDescription": "Lista actual de información laboral",
+        "BackButton": "Volver",
+        "WorkExperience": "Experiencia laboral",
+        "Description": "Actividades realizadas",
+        "AddButton": "Guardar",
+        "ModalTitle": "Agregar información laboral"
+    },
+    "ACADEMIC_INFO":{
+        "Title": "ABC JOBS",
+        "SkillType": "Info Academica",
+        "Skill": "Habilidad",
+        "BackButton": "Regresar",
+        "Technology": "",
+        "Language": "Lenguaje",
+        "Rol": "Roles"
+    },
+    "CONSULTAR_RESULTADOS_PRUEBAS":{
+        "titulo":"Consultar resultados de pruebas tecnicas",
+        "numerodocumento":"Numero de documento del candidato",
+        "maxchar":"Maximo 100 caracteres",
+        "consultar":"Consultar",
+        "name":"Nombre",
+        "fecha":"Fecha prueba",
+        "resultado":"Resultado",
+        "sinresultado":"No hay resultados apra este documento"
+    },
+    "EVALUAR_CANDIDATO":{
+        "titulo":"EVALUAR CANDIDATO",
+        "numerodocumento":"Numero de documento del candidato",
+        "consultar":"Consultar",
+        "back":"regresar",
+        "nuevo": "Nueva Evaluacion"
     }
 }

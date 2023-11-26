@@ -12,7 +12,9 @@
         "User": "User Name",
         "Password": "Password",
         "Back": "Back",
-        "LogIn": "Log In"
+        "LogIn": "Log In",
+        "Change": "I forgot my password", 
+        "CreateAccount": "Create Account"
     },
     "CREATE_COMPANY":{
         "Title": "Company Sign Up",
@@ -99,6 +101,15 @@
         "Language": "Language",
         "Rol": "Roles"
     },
+    "ACADEMIC_INFO":{
+        "Title": "ABC JOBS",
+        "SkillType": "Academic Info",
+        "Skill": "Skill",
+        "BackButton": "Back",
+        "Technology": "",
+        "Language": "Language",
+        "Rol": "Roles"
+    },
     "LOGIN_COMPANY":{
         "title":"Company Login",
         "inputUser":"User",
@@ -131,5 +142,60 @@
         "add_rol":"Add rol",
         "return":"Return",
         "edit_rol":"Edit rol"
+    },
+    "INTERVIEW_RESULTS":{
+        "Title": "Interview results",
+        "DocumentType": "Document type",
+        "IdentificationCard": "Identification Card",
+        "ForeignerCardId": "Foreigner Card ID",
+        "Passport": "Passport",
+        "DocumentNumber": "Document Number",
+        "GetButton": "Get results",
+        "CandidateName": "Candidate Name:",
+        "BackButton": "Back",
+        "TableDesc": "Updated interview results",
+        "DateInterview": "Date interview",
+        "Result": "Result"
+
+    },
+    "CAMBIO":{
+        "title": "Please input your email to reset your password",
+        "mail": "Email",
+        "close": "Cancel",
+        "send": "Send Email"
+    },
+    "ACEPT":{
+        "title": "A Email was sent with the next steps requiered to reset your password",
+        "acept": "Acept"
+    },
+    "WORKING_INFO":{
+        "Title": "Working information",
+        "Position": "Position",
+        "Company": "Company name",
+        "StartYear": "Start year",
+        "EndYear": "End year",
+        "TableDescription": "Current working information list",
+        "BackButton": "Back",
+        "WorkExperience": "Work experience",
+        "Description": "Duties",
+        "AddButton": "Save",
+        "ModalTitle": "Add working information"
+    },
+    "CONSULTAR_RESULTADOS_PRUEBAS":{
+        "titulo":"See technical tests results",
+        "numerodocumento":"Candidate document number",
+        "maxchar":"100 characters max",
+        "consultar":"Consult",
+        "name":"Name",
+        "fecha":"Test date",
+        "resultado":"Result",
+        "sinresultado":"No matches for this document"
+    },
+    "EVALUAR_CANDIDATO":{
+        "titulo":"EVALUATE CANDIDATE",
+        "numerodocumento":"Candidate Id Document",
+        "consultar":"Check",
+        "back":"Back",
+        "nuevo": "New Evaluation"
     }
 }
