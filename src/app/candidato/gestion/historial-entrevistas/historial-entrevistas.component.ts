@@ -30,8 +30,8 @@ export class HistorialEntrevistasComponent implements OnInit {
   cargarEntrevistas(id_candidato){
     this.candidatoService.obtenerHistorialEntrevista(id_candidato).subscribe(entrevistas=>{
       this.listaPrueba = entrevistas.response
-      this.listaFinalizadas = this.listaPrueba.filter(element=> element.estado==="fin")
-      this.listaProgramadas = this.listaPrueba.filter(element=> element.estado!=="fin")
+      this.listaFinalizadas = this.listaPrueba.filter(element=> element.estado==="Finalizada")
+      this.listaProgramadas = this.listaPrueba.filter(element=> element.estado!=="Finalizada")
     })
   }
 
