@@ -50,7 +50,7 @@
               </div>
               <div class="col-6">
                 <mat-form-field>
-                  <input novalidate matInput formControlName="ano_fin" id="anoFinText" class="inputDate">
+                  <input novalidate matInput formControlName="ano_fin" id="anoFinText" class="inputDate text-center">
                   <div class="alert alert-danger"
                     *ngIf=" nuevaInfoLaboralForm.get('ano_fin')!.hasError('minlength') && nuevaInfoLaboralForm.get('ano_fin')!.touched ||  
                     nuevaInfoLaboralForm.get('ano_fin')!.hasError('maxlength') && nuevaInfoLaboralForm.get('ano_fin')!.touched">
