@@ -1,0 +1,49 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger text-center">
+                    <h4 class="card-title">ABC JOBS</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-9">
+                        <h5>{{'WORKING_INFO.Title' | translate}}</h5>
+                      </div>
+                      <div class="col-3">
+                          <mat-icon (click)="nuevaInfoLaboral()">add</mat-icon>
+                      </div>
+                    </div>
+                    <div class="table-responsive">
+                      <table class="table">
+                        <caption>{{'WORKING_INFO.TableDescription' | translate}}</caption>
+                        <th></th>
+                        <tbody>
+                          <tr *ngFor="let info of lista">
+                            <td class="col-10">
+                              <div class="cargo">{{info["cargo"]}}</div>
+                              <div>{{info["empresa"]}}</div>
+                              <div>{{info["ano_inicio"]}}-{{info["ano_fin"]}}</div>
+                            </td>
+                            <td class="col-1"><mat-icon>edit</mat-icon></td>
+                            <td class="col-1"><mat-icon>delete</mat-icon></td>
+                          </tr>
+                      </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <button mat-raised-button class="btn btn-danger btn-block" (click)="backToInfo()">{{'WORKING_INFO.BackButton' | translate}}</button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon> 
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" class="select-lang" id="sel-lang" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
+  </div>
+</div>

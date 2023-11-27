@@ -1,0 +1,72 @@
+th, h5{
+    font-size: large;
+    color: #6D6C6C;
+    text-align: center;
+}
+
+td{
+    font-size: medium;
+    color: #9C9C9C;
+    text-align: left;
+}
+
+.card{
+    min-height: 600px;
+}
+
+.btn{
+    width: 100px;
+    position: relative;
+    left: 28%;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+::ng-deep .mat-form-field {
+    box-shadow: 0 8px 6px -6px #9C9C9C;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+  }
+
+.mat-fields{
+    margin-bottom: 20px;
+  }
+
+.doctypes {
+    width: 180px !important;
+    font-size:medium;
+    padding-left: 20px;
+    text-indent: 5px;
+  }
+
+input{
+    font-size: medium;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.optgroup {
+    font-size:10px;
+}
+
+.nameInterview {
+    color: #000000;
+    font-size:medium;
+}
+
+h4{
+    font-size: medium;
+    color: black;
+}
+
+.candidate_name{
+    margin-top: 20px;
+}
+
+hr{
+    border-top: 1px solid #9C9C9C;
+}

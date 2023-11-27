@@ -8,7 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { MatButtonModule } from '@angular/material/button';
-import { MatRippleModule } from '@angular/material/core';
+import { MatNativeDateModule, MatRippleModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -24,6 +24,14 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AgregarRolComponent } from './empresa/gestion-empresa/agregar-rol/agregar-rol.component';
 import { LandingComponent } from './landing/landing/landing.component';
+import { CambioContrasenaComponent } from './landing/cambio-contrasena/cambio-contrasena.component';
+import { MatDialogModule} from '@angular/material/dialog';
+import { AceptarCambioComponent } from './landing/aceptar-cambio/aceptar-cambio.component';
+import { EvaluacionCandidatoComponent } from './empresa/evaluacion-candidato/evaluacion-candidato.component';
+import { CandidatoInfoAcademicaComponent } from './candidato/candidato-info-academica/candidato-info-academica.component';
+import { CrearInfoAcademicaComponent } from './candidato/crear-info-academica/crear-info-academica.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NuevaEvaluacionCandidatoComponent } from './empresa/nueva-evaluacion-candidato/nueva-evaluacion-candidato.component';
 
 // Factory function required during AOT compilation
 export function httpTranslateLoaderFactory(http: HttpClient) {
@@ -32,6 +40,8 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
 
 @NgModule({
   imports: [
+    MatDatepickerModule, MatNativeDateModule,
+    MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
@@ -69,8 +79,14 @@ export function httpTranslateLoaderFactory(http: HttpClient) {
     HistorialEntrevistasComponent,
     AgregarRolComponent,
     LandingComponent,
+    CambioContrasenaComponent,
+    AceptarCambioComponent,
+    EvaluacionCandidatoComponent,
+    CandidatoInfoAcademicaComponent,
+    CrearInfoAcademicaComponent,
+    NuevaEvaluacionCandidatoComponent,
   ],
-  providers:[ToastrService],
+  providers:[ToastrService,MatDatepickerModule, MatNativeDateModule,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

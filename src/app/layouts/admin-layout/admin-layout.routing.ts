@@ -11,6 +11,13 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { HistorialEntrevistasComponent } from 'app/candidato/gestion/historial-entrevistas/historial-entrevistas.component';
 import { CandidatoInfoTecnicaComponent } from 'app/candidato/candidato-infoTecnica/candidatoInfoTecnica/candidatoInfoTecnica.component';
 import { ConsultarEquipoComponent } from 'app/empresa/consultar-equipo/consultar-equipo.component';
+import { ResultadosEntrevistasComponent } from 'app/candidato/gestion/resultados-entrevistas/resultadosEntrevistas.component';
+import { CandidatoInfoLaboralComponent } from 'app/candidato/candidato-infoLaboral/candidato-infoLaboral.component';
+import { NuevaInfoLaboralComponent } from 'app/candidato/candidato-infoLaboral/nuevaInfoLaboral.component';
+import { CandidatoInfoAcademicaComponent } from 'app/candidato/candidato-info-academica/candidato-info-academica.component';
+import { ConsultarResultadosPruebasTecnicasComponent } from 'app/empresa/consultar-resultados-pruebas-tecnicas/consultar-resultados-pruebas-tecnicas.component';
+import { EvaluacionCandidatoComponent } from 'app/empresa/evaluacion-candidato/evaluacion-candidato.component';
+
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -65,5 +72,11 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'historial_entrevistas',        component: HistorialEntrevistasComponent },
     { path: 'info_tecnica',   component: CandidatoInfoTecnicaComponent },
+    { path: 'info_academica',   component: CandidatoInfoAcademicaComponent },
     { path: 'equipos',        component: ConsultarEquipoComponent },
+    { path: 'resultadosEntrevistas',  component: ResultadosEntrevistasComponent },
+    { path: 'info_laboral',     component:  CandidatoInfoLaboralComponent},
+    { path: 'nuevaInfoLaboral', component: NuevaInfoLaboralComponent},
+    { path: 'evaluacionCandidatos',  component: EvaluacionCandidatoComponent },
+    { path: 'resultadosPruebasTecnicas',  component: ConsultarResultadosPruebasTecnicasComponent },
 ];

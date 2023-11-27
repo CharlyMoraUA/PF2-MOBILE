@@ -1,0 +1,33 @@
+h5{
+    font-size: medium;
+    vertical-align: middle;
+    color: gray;
+}
+
+td{
+    font-size: smaller;
+    color: #9C9C9C;
+}
+
+.cargo{
+    font-size: small;
+    color: #6D6C6C;
+}
+
+.card{
+    min-height: 500px;
+    padding-bottom: 50px;
+}
+
+.btn{
+    width: 100px;
+    position: relative;
+    left: 30%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+caption{
+    font-size: xx-small;
+}

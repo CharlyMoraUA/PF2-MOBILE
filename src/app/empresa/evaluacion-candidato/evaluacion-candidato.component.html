@@ -1,0 +1,49 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger text-center">
+                    <h4 class="card-title">
+                      ABC JOBS
+                    </h4>
+                  </div>
+                  <div class="card-body">
+                      <div>
+                        <h5 class="mat-h2">{{'EVALUAR_CANDIDATO.titulo' | translate}}</h5>
+                      </div>
+                      <div class="horizontal-line"></div>
+                      <div class="row">
+                        <div class="col-lg-6 col-md-12 ml-auto mr-auto">
+                          <mat-form-field class="example-full-width text-center">
+                            <input [(ngModel)]="candidateDocument" matInput placeholder="{{'EVALUAR_CANDIDATO.numerodocumento' | translate}}" type="text" >
+                          </mat-form-field>
+                        </div>
+                      </div>
+                      <div class="col-md-12 d-flex justify-content-center">
+                        {{candidateName}}
+                      </div>
+                      <br>
+                      <div class="col-md-12 d-flex justify-content-center">
+                        <button mat-raised-button class="btn center btn-danger" (click)="backToHome()" >{{'EVALUAR_CANDIDATO.back' | translate}}</button>
+                        <button mat-raised-button class="btn center btn-danger" (click)="searchCandidate()" >{{'EVALUAR_CANDIDATO.consultar' | translate}}</button>
+                      </div>
+                      <div class="col-md-12 d-flex justify-content-center">
+                        <button mat-raised-button class="btn center btn-danger" (click)="newEvaluation()" [disabled]="candidateName === ''">{{'EVALUAR_CANDIDATO.nuevo' | translate}}</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="copyright pull-right" style="margin-right: 5%;">
+  <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+      <mat-icon>translate</mat-icon>
+      <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;"
+          class="select-lang" id="sel-lang" #selLang (change)="translateLanguageTo(selLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+      </select>
+  </div>
+</div>

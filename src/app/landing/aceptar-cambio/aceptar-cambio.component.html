@@ -1,0 +1,22 @@
+<div class="main-content main-content-mobile" style="background-color:gray;">
+    <div class="container-fluid">
+        <div class="col-12">
+            <div style="text-align:center; " >
+                <div class="row absolute " style="color:white; text-align:center; ">
+                    {{'ACEPT.title' | translate}}
+                </div>
+                <div class="row" style="width: 120%; text-align:center">
+                    <button mat-raised-button class="btn btn-danger" (click)="close()" style="display: block;margin: auto;">{{'ACEPT.acept' | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyright pull-right" style="margin-right: 5%;">
+    <div style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;">
+        <mat-icon>translate</mat-icon> 
+        <select style="border-radius: 5px; background-color:red; color: white; padding-left: 2px; padding-right: 2px;" #selLang (change)="translateLanguageTo(selLang.value)">
+            <option *ngFor="let language of translate.getLangs()" [value]="language">{{ language }}</option>
+        </select>
+    </div>
+  </div>
